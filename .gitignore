@@ -4,6 +4,21 @@ _site/
 .sass-cache/
 .jekyll-metadata
 
+# Sass #
+###################
+/.yardoc
+/coverage
+/doc
+/pkg
+/test/rails
+/.sass-cache
+/.haml
+/.sass
+/site
+*.rbc
+/.sass
+*.lock
+
 # Compiled source #
 ###################
 *.com
