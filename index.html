@@ -2,13 +2,99 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../../favicon.ico">
-
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
     <title>Karly Nelson</title>
+    <style>
+      body {
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        background-color: #2196f3;
+        color: rgba(255, 255, 255, .8);
+        font-weight: 300;
+        padding: .5rem;
+      }
 
-    <link href=# rel="stylesheet">
+      h1 {
+        font-family: 'Permanent Marker', monospace;
+        font-size: 6rem;
+        margin-bottom: 2rem;
+        margin-top: 10rem;
+        color: white;
+        line-height: 1;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 300;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      li {
+        display: inline-block;
+      }
+
+      p {
+        margin-top: 2rem;
+        font-size: 1.25rem;
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+        position: relative;
+      }
+
+      a::after {
+        transition: all ease 300ms;
+        content: '';
+        height: 3px;
+        width: 0%;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        right: 0;
+        background: white;
+      }
+
+      a:hover,
+      a:focus {
+        outline: none;
+      }
+
+      a:hover::after,
+      a:focus::after {
+        width: 100%;
+      }
+
+      @media (max-width: 500px) {
+        h1 {
+          margin-top: 5rem;
+          font-size: 4rem;
+        }
+
+        a::after {
+          width: 100%;
+        }
+      }
+
+    </style>
   </head>
 
-  <body style="background-image: url('http://i.giphy.com/GsaGeoyPw24ww.gif');">
+  <body>
+    <h1>Karly Nelson</h1>
+    <h2>I'm a St. Louis-based User Experience Designer and Front-end Developer at <a target="_blank" href="http://www.asynchrony.com">Asynchrony Labs</a>. I make websites and mobile apps, design logos, do some woodburning, and shoot the occasional video.</h2>
+    <p>Find me on <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/karlynelson">LinkedIn</a>, <a target="_blank" class="dribbble" href="https://dribbble.com/KarlyANelson">Dribbble</a>, and <a target="_blank" class="github" href="https://github.com/karlyanelson">Github</a>, or email me at <a target="_blank" href="mailto:karlyanelson@gmail.com">karlyanelson@gmail.com</a></p>
   </body>
 </html>
