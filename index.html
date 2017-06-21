@@ -5,17 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../../favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700" rel="stylesheet"> -->
     <title>Karly Nelson</title>
     <style>
       body {
         text-align: center;
         font-family: 'Roboto', sans-serif;
         font-size: 16px;
-        background-color: #2196f3;
+        background-color: #414846;
         color: rgba(255, 255, 255, .8);
         font-weight: 300;
         padding: .5rem;
+        margin: 0;
+        position: relative;
+      }
+
+      .bg-img {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        min-height: 100vh;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        background-image: url(images/tree.gif);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
       }
 
       h1 {
@@ -96,5 +115,6 @@
     <h1>Karly Nelson</h1>
     <h2>I'm a St. Louis-based User Experience Designer and Front-end Developer at <a target="_blank" href="http://www.asynchrony.com">Asynchrony Labs</a>. I make websites and mobile apps, design logos, do some woodburning, and shoot the occasional video.</h2>
     <p>Find me on <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/karlynelson">LinkedIn</a>, <a target="_blank" class="dribbble" href="https://dribbble.com/KarlyANelson">Dribbble</a>, and <a target="_blank" class="github" href="https://github.com/karlyanelson">Github</a>, or email me at <a target="_blank" href="mailto:karlyanelson@gmail.com">karlyanelson@gmail.com</a></p>
+    <div class="bg-img"></div>
   </body>
 </html>
