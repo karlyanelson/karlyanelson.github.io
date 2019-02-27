@@ -1,0 +1,109 @@
+body {
+  text-align: center;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 16px;
+  background-color: #414846;
+  color: rgba(255, 255, 255, .8);
+  font-weight: 300;
+  padding: .5rem;
+  margin: 0;
+  position: relative;
+}
+
+.bg-img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  /*background-position: center;*/
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-img-home {
+  background-image: url(images/tree.gif);
+}
+
+.bg-img-404 {
+  background-image: url(images/space.gif);
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 6rem;
+  margin-bottom: 2rem;
+  margin-top: 10rem;
+  color: white;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  display: inline-block;
+}
+
+p {
+  margin-top: 2rem;
+  font-size: 1.25rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+}
+
+a::after {
+  transition: all ease 300ms;
+  content: '';
+  height: 3px;
+  width: 0%;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  background: white;
+}
+
+a:hover,
+a:focus {
+  outline: none;
+}
+
+a:hover::after,
+a:focus::after {
+  width: 100%;
+}
+
+@media (max-width: 500px) {
+
+  body {
+    color: white;
+  }
+
+  h1 {
+    margin-top: 5rem;
+    font-size: 4rem;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
