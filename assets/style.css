@@ -70,11 +70,6 @@ a::after {
   background: white;
 }
 
-a:hover,
-a:focus {
-  outline: none;
-}
-
 a:hover::after,
 a:focus::after {
   width: 100%;
@@ -93,5 +88,9 @@ a:focus::after {
 
   a {
     text-decoration: underline;
+  }
+
+  a::after {
+    display: none;
   }
 }
