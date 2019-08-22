@@ -29,7 +29,7 @@ h1 {
   line-height: 1;
 }
 
-h2 {
+.intro {
   font-size: 1.5rem;
   font-weight: 300;
   max-width: 800px;
@@ -45,7 +45,7 @@ li {
   display: inline-block;
 }
 
-p {
+.links {
   margin-top: 2rem;
   font-size: 1.25rem;
 }
