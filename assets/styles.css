@@ -36,6 +36,10 @@ h1 {
   margin: 0 auto;
 }
 
+.link-home {
+  margin: 1rem;
+}
+
 ul {
   list-style: none;
   padding-left: 0;
