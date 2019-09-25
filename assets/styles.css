@@ -2,7 +2,7 @@ body {
   text-align: center;
   font-family: 'Noto Sans', sans-serif;
   font-size: 16px;
-  background-color: #414846;
+  background-color: #000;
   color: rgba(255, 255, 255, .8);
   font-weight: 400;
   padding: .5rem;
@@ -17,7 +17,7 @@ body {
   left: 0;
   min-width: 100%;
   min-height: 100%;
-  opacity: .25;
+  opacity: .5;
 }
 
 h1 {
