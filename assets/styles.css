@@ -2,13 +2,14 @@ body {
   text-align: center;
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
-  background-color: #000;
+  background-color: #0d3148;
   color: rgba(255, 255, 255, .8);
   font-weight: 400;
   padding: .5rem;
   margin: 0;
   position: relative;
   letter-spacing: 0.5px;
+  text-shadow: 2px 2px 4px rgba(16, 17, 41, .5);
 }
 
 .bg-img {
