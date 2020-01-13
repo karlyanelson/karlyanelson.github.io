@@ -1,4 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  height: 100vh;
   text-align: center;
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
@@ -82,9 +89,13 @@ a:focus::after {
   width: 100%;
 }
 
+footer {
+  margin-bottom: 1rem;
+  font-size: .75em;
+}
+
 
 @media (max-width: 500px) {
-
   body {
     color: white;
   }
@@ -100,5 +111,10 @@ a:focus::after {
 
   a::after {
     display: none;
+  }
+
+  footer {
+    position: relative;
+    margin-top: 3rem;
   }
 }
