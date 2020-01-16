@@ -29,6 +29,10 @@ body {
   opacity: .5;
 }
 
+.no-motion-img {
+  display: none;
+}
+
 h1 {
   /* font-family: 'Poppins', sans-serif; */
   font-size: 6rem;
@@ -94,6 +98,14 @@ footer {
   font-size: .75em;
 }
 
+button {
+  font-size: 1rem;
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: .5rem 1rem;
+}
+
 
 @media (max-width: 500px) {
   body {
@@ -116,5 +128,16 @@ footer {
   footer {
     position: relative;
     margin-top: 3rem;
+  }
+}
+
+/* CSS to disable motion goes here */
+@media (prefers-reduced-motion: reduce) {
+  .bg-gif, .pause-gif {
+    display: none;
+  }
+
+  .no-motion-img {
+    display: inherit;
   }
 }
