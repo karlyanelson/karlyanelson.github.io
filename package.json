@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/karlyanelson/karlyanelson.github.io#readme",
   "dependencies": {
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^3.1.1"
   }
 }
