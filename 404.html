@@ -2,72 +2,102 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8">
-    <meta name="Description" content="Hi, I'm Karly Nelson. I'm a UX Designer at World Wide Technology in St. Louis.">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta
+      name="Description"
+      content="Hi, I'm Karly Nelson. I'm a UX Designer at World Wide Technology in St. Louis."
+    />
     <!-- favicons -->
-    <link rel="icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:500,700,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-88TSRYR9CT"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-88TSRYR9CT");
+    </script>
   </head>
 
   <body>
     <main>
       <a class="link-home" href="/">Karly Nelson</a>
       <h1>Oops! <span role="image" aria-label="Sad emoji.">😓</span></h1>
-      <p class="intro">The page you were looking for either doesn't exist or was deleted.</p>
+      <p class="intro">
+        The page you were looking for either doesn't exist or was deleted.
+      </p>
       <a class="link-home" href="/">Go to home page</a>
     </main>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-114689351-1"></script>
+    <script
+      defer
+      src="https://www.googletagmanager.com/gtag/js?id=UA-114689351-1"
+    ></script>
     <script defer>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'UA-114689351-1');
+      gtag("config", "UA-114689351-1");
     </script>
     <script defer>
       /*!
-      * Run event after DOM is ready
-      * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
-      * @param  {Function} fn Callback function
-      */
+       * Run event after DOM is ready
+       * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
+       * @param  {Function} fn Callback function
+       */
       const ready = function (fn) {
-          // Sanity check
-          if (typeof fn !== 'function') return;
+        // Sanity check
+        if (typeof fn !== "function") return;
 
-          // If document is already loaded, run method
-          if (document.readyState === 'interactive' || document.readyState === 'complete') {
-              return fn();
-          }
+        // If document is already loaded, run method
+        if (
+          document.readyState === "interactive" ||
+          document.readyState === "complete"
+        ) {
+          return fn();
+        }
 
-          // Otherwise, wait until document is loaded
-          document.addEventListener('DOMContentLoaded', fn, false);
+        // Otherwise, wait until document is loaded
+        document.addEventListener("DOMContentLoaded", fn, false);
       };
 
-      const pauseGif = function() {
-        var gif = document.querySelector('video');
-        var pauseButton = document.querySelector('#pauseButton');
-        pauseButton.onclick = function() {
+      const pauseGif = function () {
+        var gif = document.querySelector("video");
+        var pauseButton = document.querySelector("#pauseButton");
+        pauseButton.onclick = function () {
           gif.pause();
           pauseButton.remove();
-        }
-      }
+        };
+      };
 
       // Run the function when the document is ready
-      ready(function() {
-          pauseGif();
+      ready(function () {
+        pauseGif();
       });
-
     </script>
   </body>
 </html>
