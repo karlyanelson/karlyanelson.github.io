@@ -1,4 +1,4 @@
-# karlyanelson.github.io
+# KarlyNelson.com
 
 ## How to use Netlify Functions to make secure API calls
 
@@ -31,3 +31,7 @@
 ## note to self
 
 copy over functions from vanilla js academy so they're hosted here for redirect
+
+## localhost
+
+Run `node server.js` to get the site running at `localhost:400`

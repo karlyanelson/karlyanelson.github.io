@@ -1,155 +1,156 @@
 :root {
-    --color-text: #F1F1F1;
-    --color-bg: #303745;
-    --color-action: #6fd5fd;
+  --color-text: #f1f1f1;
+  --color-bg: #303745;
+  --color-action: #6fd5fd;
 }
 
 @media (prefers-color-scheme: light) {
-    :root {
-        --color-text: #303745;
-        --color-bg: #F1F1F1;
-        --color-action: #165288;
-    }
+  :root {
+    --color-text: #303745;
+    --color-bg: #f1f1f1;
+    --color-action: #0067c4;
+  }
 }
 
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 
-  body {
-    font-family: 'Raleway', sans-serif;
-    font-size: 16px;
-    background-color: var(--color-bg);
-    color: var(--color-text);
-    font-weight: 500;
-    padding: .5rem;
-    margin: 0;
-    position: relative;
-    letter-spacing: 0.5px;
-  }
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-weight: 400;
+  padding: 0.5rem;
+  margin: 0;
+  position: relative;
+  letter-spacing: 0.5px;
+}
 
-  .bg-img {
-    position: fixed;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    opacity: .5;
-  }
+.bg-img {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0.5;
+}
 
-  .no-motion-img {
-    display: none;
-  }
+.no-motion-img {
+  display: none;
+}
 
+h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  margin-top: 10rem;
+  color: var(--color-text);
+  line-height: 1;
+  font-weight: 800;
+}
+
+main,
+footer {
+  max-width: 45rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+footer {
+  margin-top: 4rem;
+}
+
+.intro {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.link-home {
+  margin: 1rem 0;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  display: inline-block;
+}
+
+.links {
+  margin-top: 2rem;
+  font-size: 1.25rem;
+}
+
+a {
+  color: var(--color-action);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  position: relative;
+}
+
+a::after {
+  transition: all ease 300ms;
+  content: "";
+  height: 3px;
+  width: 0%;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  background: var(--color-action);
+}
+
+a:hover::after,
+a:focus::after {
+  width: 100%;
+}
+
+footer {
+  margin-bottom: 1rem;
+  font-size: 0.75em;
+}
+
+button {
+  font-size: 1rem;
+  background: transparent;
+  color: var(--color-action);
+  border: 1px solid var(--color-action);
+  padding: 0.5rem 1rem;
+}
+
+@media (max-width: 500px) {
   h1 {
+    margin-top: 5rem;
     font-size: 4rem;
-    margin-bottom: 2rem;
-    margin-top: 10rem;
-    color: var(--color-text);
-    line-height: 1;
-    font-weight: 900;
-  }
-
-  main, footer {
-    max-width: 42rem;
-    margin: 0 auto;
-    padding: 1rem;
-  }
-
-  footer {
-      margin-top: 4rem;
-  }
-
-  .intro {
-    font-size: 1.5rem;
-    font-weight: 500;
-  }
-
-  .link-home {
-    margin: 1rem 0;
-  }
-
-  ul {
-    list-style: none;
-    padding-left: 0;
-  }
-
-  li {
-    display: inline-block;
-  }
-
-  .links {
-    margin-top: 2rem;
-    font-size: 1.25rem;
   }
 
   a {
-    color: var(--color-action);
-    text-decoration: none;
-    font-weight: 700;
-    display: inline-block;
-    position: relative;
+    text-decoration: underline;
   }
 
   a::after {
-    transition: all ease 300ms;
-    content: '';
-    height: 3px;
-    width: 0%;
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    right: 0;
-    background: var(--color-action);
-  }
-
-  a:hover::after,
-  a:focus::after {
-    width: 100%;
+    display: none;
   }
 
   footer {
-    margin-bottom: 1rem;
-    font-size: .75em;
+    position: relative;
+    margin-top: 3rem;
+  }
+}
+
+/* CSS to disable motion goes here */
+@media (prefers-reduced-motion: reduce) {
+  .bg-gif,
+  .pause-gif {
+    display: none;
   }
 
-  button {
-    font-size: 1rem;
-    background: transparent;
-    color: var(--color-action);
-    border: 1px solid var(--color-action);
-    padding: .5rem 1rem;
+  .no-motion-img {
+    display: inherit;
   }
-
-
-  @media (max-width: 500px) {
-    h1 {
-      margin-top: 5rem;
-      font-size: 4rem;
-    }
-
-    a {
-      text-decoration: underline;
-    }
-
-    a::after {
-      display: none;
-    }
-
-    footer {
-      position: relative;
-      margin-top: 3rem;
-    }
-  }
-
-  /* CSS to disable motion goes here */
-  @media (prefers-reduced-motion: reduce) {
-    .bg-gif, .pause-gif {
-      display: none;
-    }
-
-    .no-motion-img {
-      display: inherit;
-    }
-  }
+}
