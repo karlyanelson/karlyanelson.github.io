@@ -19,7 +19,7 @@
   "homepage": "https://github.com/karlyanelson/karlyanelson.github.io#readme",
   "dependencies": {
     "connect": "^3.7.0",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^2.6.7",
     "serve-static": "^1.15.0"
   }
 }
