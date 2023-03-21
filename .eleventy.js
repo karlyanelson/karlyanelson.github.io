@@ -12,6 +12,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ "./favicon": "/" });
 
+  eleventyConfig.addPassthroughCopy("./_redirects");
+
   eleventyConfig.addShortcode("version", function () {
     return now;
   });
