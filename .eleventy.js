@@ -14,6 +14,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("./_redirects");
   eleventyConfig.addPassthroughCopy("./functions");
+  eleventyConfig.addPassthroughCopy("netlify.toml");
 
   eleventyConfig.addShortcode("version", function () {
     return now;
