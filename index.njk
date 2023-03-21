@@ -1,10 +1,9 @@
-{% extends "_includes/default.njk" %}
+---
+layout: default.njk
+---
 
-{# {% block title %}It does work{% endblock %} #}
-
-{% block content %}
-  <div class="max-w-2xl mx-auto">
-    {# <div>
+<div class="max-w-2xl mx-auto">
+  {# <div>
       <span class="text-change">Good design</span>
       <br/ >
         <span class="change">is<br/>as little design<br/>as possible</span><br/>
@@ -12,8 +11,8 @@
       </div>
     </div> #}
 
-    <h1 class="text-6xl font-bold mt-40">Hi! I'm Karly Nelson</h1>
-    <p class="text-2xl mt-8">
+  <h1 class="text-6xl font-bold mt-40">Hi! I'm Karly Nelson</h1>
+  <p class="text-2xl mt-8">
         I'm a Senior Software Engineer at
         <a target="_blank" rel="noopener noreferrer" href="https://lworks.io/"
           >Ledger Works</a
@@ -21,7 +20,7 @@
         in St. Louis. I design and build web apps, mobile apps, and a pretty
         sweet cheese board.
       </p>
-    <p class="mt-6 text-xl">
+  <p class="mt-6 text-xl">
           Find me on
           <a
             target="_blank"
@@ -45,4 +44,4 @@
             >Github</a
           >.
       </p>
-  {% endblock %}
+  {# {% endblock %} #}
