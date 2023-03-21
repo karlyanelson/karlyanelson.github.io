@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/karlyanelson/karlyanelson.github.io#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy": "^2.0.0",
     "alpinejs": "^3.7.0",
     "html-minifier": "^4.0.0",
     "tailwindcss": "^3.0.0"
