@@ -58,19 +58,21 @@
     <script defer src="/js/alpine.js?v={% version %}"></script>
   </head>
   <body>
-    <header>
-      Karly Nelson
+    <header class="flex items-center justify-between px-8 max-w-7xl mx-auto">
+      <span class="title-display">Karly Nelson</span>
 
       <nav>
         <a href="/">About Me</a>
         <a href="/articles">Articles</a>
       </nav>
     </header>
-    <main class="px-6 max-w-4xl mx-auto">
+    <main class="px-6 max-w-5xl mx-auto">
       {% block content %} {{ content | safe }} {% endblock %}
     </main>
 
-    <footer>
+    <footer
+      class="text-secondary flex items-center justify-between px-8 max-w-7xl mx-auto"
+    >
       <p>&copy; 2024 Karly Nelson</p>
       <p>Colophon: Built with Eleventy, Tailwind CSS, AlpineJS, and Netlify</p>
     </footer>

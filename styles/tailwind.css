@@ -8,7 +8,7 @@
   }
 
   .text-secondary {
-    @apply text-slate-600 dark:text-slate-400;
+    @apply text-slate-600 dark:text-slate-300;
   }
 
   .text-action {
@@ -20,10 +20,18 @@
   }
 
   .border-action {
-    @apply border border-solid rounded border-sky-700 dark:border-sky-400;
+    @apply border-sky-700 dark:border-sky-400;
   }
 
-  .monospace {
+  .border-primary {
+    @apply border-slate-800 dark:border-slate-200;
+  }
+
+  .border-secondary {
+    @apply border-slate-600 dark:border-slate-300;
+  }
+
+  .title-display {
     font-family: "Tiny5", "Courier New", Courier, monospace;
   }
 }
@@ -34,7 +42,7 @@ body {
 }
 
 h1 {
-  @apply font-extrabold text-7xl;
+  @apply title-display font-extrabold text-7xl;
 }
 
 a {
