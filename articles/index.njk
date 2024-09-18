@@ -1,0 +1,22 @@
+---
+layout: default.njk
+title: Writing
+eleventyImport:
+  collections: ["post"]
+published: Sept 18, 2024
+---
+
+<h1>Writing</h1>
+
+<ul>
+{%- for post in collections.post -%}
+  <li{% if page.url == post.url %} aria-current="page"{% endif %} class="my-6">
+    <a class="p-8 border-action fancy-hover hover:bg-action hover:bg-opacity-15 dark:hover:bg-opacity-15" href="{{ post.url }}">
+      <h2 class="font-bold text-2xl ">{{ post.data.title }}</h2>
+        <p class="text-primary">{{ post.data.updatedDate}}</p>
+      </a>
+  </li>
+{%- endfor -%}
+</ul>
+
+
