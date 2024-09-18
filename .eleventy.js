@@ -1,4 +1,4 @@
-const htmlmin = require("html-minifier");
+const htmlmin = require("html-minifier-terser");
 
 const now = String(Date.now());
 

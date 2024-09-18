@@ -19,10 +19,10 @@
   },
   "homepage": "https://github.com/karlyanelson/karlyanelson.github.io#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0",
-    "alpinejs": "^3.7.0",
-    "html-minifier": "^4.0.0",
-    "tailwindcss": "^3.0.0"
+    "@11ty/eleventy": "^2.0.1",
+    "alpinejs": "^3.14.1",
+    "html-minifier-terser": "^7.2.0",
+    "tailwindcss": "^3.4.12"
   },
   "dependencies": {
     "node-fetch": "^2.6.1"
