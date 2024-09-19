@@ -31,6 +31,12 @@ date: Last Modified
 
 Use `toLocaleString` to format your date
 
+```html
+{{page.date.toLocaleString()}}
+```
+
+or
+
 ```js
 eleventyConfig.addFilter("postDate", (dateObj) => {
   return dateObj.toLocaleString(undefined, {
