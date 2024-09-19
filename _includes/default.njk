@@ -28,24 +28,14 @@
     <meta name="theme-color" content="#ffffff" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
 
+    {#
     <link
       href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap"
       rel="stylesheet"
     />
+    #}
     <link
       href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
       rel="stylesheet"
     />
 
@@ -66,22 +56,22 @@
     {% block head %}{% endblock %}
     <script defer src="/js/alpine.js?v={% version %}"></script>
   </head>
-  <body class="flex flex-col">
+  <body>
     <header
-      class="flex-none flex items-center justify-between flex-wrap gap-8 p-8 max-w-7xl mx-auto title-display text-2xl w-full"
+      class="flex items-center justify-between flex-wrap gap-8 p-8 max-w-7xl mx-auto title-display text-2xl w-full"
     >
       <a href="/" class="text-primary">Karly Nelson</a>
       <nav class="flex items-center gap-8">
         <a href="/">About Me</a>
-        <a href="/posts">Writing</a>
+        <a href="/posts">Articles</a>
       </nav>
     </header>
-    <main class="flex-1 px-6 max-w-5xl mx-auto">
+    <main class="px-6 max-w-5xl mx-auto mt-24">
       {% block content %} {{ content | safe }} {% endblock %}
     </main>
 
     <footer
-      class="text-secondary flex items-center justify-between p-8 max-w-7xl mx-auto w-full"
+      class="text-secondary flex items-center justify-between p-8 max-w-7xl mx-auto w-full mt-40"
     >
       <p>&copy; 2024 Karly Nelson</p>
       <p>

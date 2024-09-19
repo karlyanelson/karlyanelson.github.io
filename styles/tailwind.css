@@ -4,7 +4,7 @@
 
 @layer utilities {
   .text-primary {
-    @apply text-slate-800 dark:text-slate-200;
+    @apply text-slate-800 dark:text-slate-100;
   }
 
   .text-secondary {
@@ -31,17 +31,20 @@
     @apply border-slate-600 dark:border-slate-300;
   }
 
+  .font-family-basic {
+    font-family: "Karla", Helvetica, Arial, sans-serif;
+  }
+
   .title-display {
+    @apply font-family-basic
     /* font-family: "Satisfy", "Tiny5", "Courier New", Courier, monospace; */
-    font-family: "Tiny5", "Courier New", Courier, monospace;
+    /* font-family: "Tiny5", "Courier New", Courier, monospace; */;
   }
 }
 
 body {
-  font-family: "Karla", Helvetica, Arial, sans-serif;
   font-size: 1.125rem;
-  min-height: 100vh;
-  @apply bg-white dark:bg-slate-800 text-primary;
+  @apply bg-white dark:bg-slate-800 text-primary font-family-basic;
 }
 
 h1 {
@@ -92,14 +95,18 @@ pre[class*="language-"] {
   @apply inline-block border border-solid border-secondary text-secondary text-xs px-2 py-1 rounded-lg;
 }
 
+article h1 {
+  @apply font-family-basic;
+}
+
 article h2 {
-  @apply title-display text-5xl font-bold mt-12 mb-4;
+  @apply text-5xl font-bold mt-12 mb-4;
 }
 
 article h3 {
-  @apply title-display text-3xl font-bold mt-10 mb-4;
+  @apply text-3xl font-bold mt-10 mb-4;
 }
 
 article h4 {
-  @apply title-display text-2xl font-bold mt-8 mb-4;
+  @apply text-2xl font-bold mt-8 mb-4;
 }
