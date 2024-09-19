@@ -195,17 +195,19 @@ I made a CodeSandbox - [chart-js-custom-colors - CodeSandbox](https://codesandbo
 
 ## Bonus Points: How to make the chart responsive
 
+{% raw %}
+
 ```tsx
 const options = {
   responsive: true,
   maintainAspectRatio: false,
 };
 
-const style = { minHeight: 300 };
-
 return (
-  <div className="relative max-w-full" style={style}>
+  <div style={{ minHeight: 300, position: "relative", maxWidth: "100%" }}>
     <Line options={options} data={data} />
   </div>
 );
 ```
+
+{% endraw %}
