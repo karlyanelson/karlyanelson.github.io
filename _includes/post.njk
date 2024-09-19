@@ -19,10 +19,14 @@ layout: default.njk
   </ul>
 
   <hr />
-  <aside class="mt-8">
-    <h2 class="text-xl">Table of Contents</h2>
-    {{ content | toc | safe }}
-  </aside>
+  <details class="mt-8" open>
+    <summary class="mb-4">Table of Contents</summary>
+    <aside
+      class="border border-solid border-secondary px-4 py-6 rounded bg-slate-200 dark:bg-slate-900"
+    >
+      {{ content | toc | safe }}
+    </aside>
+  </details>
 
-  <div class="mt-16">{{ content | safe }}</div>
+  <div class="mt-16 article-content">{{ content | safe }}</div>
 </article>

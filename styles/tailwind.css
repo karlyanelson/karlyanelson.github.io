@@ -99,26 +99,24 @@ pre[class*="language-"] {
   @apply inline-block border border-solid border-secondary text-secondary text-xs px-2 py-1 rounded-lg;
 }
 
-article h1 {
+.article-content h1 {
   @apply font-family-basic;
 }
 
-article h2 {
+.article-content h2 {
   @apply text-5xl font-bold mt-12 mb-4;
 }
 
-article h3 {
+.article-content h3 {
   @apply text-3xl font-bold mt-10 mb-4;
 }
 
-article h4 {
+.article-content h4 {
   @apply text-2xl font-bold mt-8 mb-4;
 }
 
 .toc ol {
   list-style-type: disc;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
   padding-inline-start: 40px;
 }
 
