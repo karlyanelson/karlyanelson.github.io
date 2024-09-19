@@ -51,9 +51,25 @@ body {
   @apply bg-white dark:bg-slate-800 text-primary font-family-basic;
 }
 
+/* Headings */
+
 h1 {
   @apply title-display font-extrabold text-7xl;
 }
+
+h2 {
+  @apply text-5xl font-bold;
+}
+
+h3 {
+  @apply text-4xl font-bold;
+}
+
+h4 {
+  @apply text-3xl font-bold;
+}
+
+/* Links */
 
 a:not(.text-primary) {
   @apply text-action;
@@ -65,6 +81,8 @@ a {
   display: inline-block;
   position: relative;
 }
+
+/* Fancy hover */
 
 .fancy-hover::after {
   @apply bg-action;
@@ -89,6 +107,8 @@ footer a {
   @apply fancy-hover;
 }
 
+/* Code blocks */
+
 code[class*="language-"],
 pre[class*="language-"] {
   font-size: 0.875em;
@@ -99,6 +119,8 @@ code {
   font-size: 0.75em;
   @apply bg-slate-600 rounded-lg py-1 px-2;
 }
+
+/* Chips */
 
 ._chip-base {
   @apply inline-block border border-solid text-sm px-2 py-1 rounded-lg;
@@ -112,25 +134,17 @@ code {
   @apply _chip-base border-action text-action bg-action-card-hover;
 }
 
-.article-content h1 {
-  @apply font-family-basic;
-}
-
-.article-content h2 {
-  @apply text-5xl font-bold mt-16 mb-4;
-}
-
-.article-content h3 {
-  @apply text-4xl font-bold mt-16 mb-4;
+/* Articles */
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4 {
+  @apply mt-16 mb-4;
 }
 
 .article-content h2 + h3,
 .article-content h3 + h4 {
   @apply mt-6;
-}
-
-.article-content h4 {
-  @apply text-3xl font-bold mt-16 mb-4;
 }
 
 .article-content p {
@@ -146,6 +160,8 @@ code {
   padding-inline-start: 2rem;
 }
 
+/* Table of Contents */
+
 .toc ol {
   list-style-type: disc;
   padding-inline-start: 2rem;
@@ -158,4 +174,23 @@ code {
 .article-content a,
 .toc a {
   @apply fancy-hover;
+}
+
+/* Media Queries */
+@media screen and (max-width: 640px) {
+  h1 {
+    @apply text-5xl;
+  }
+
+  h2 {
+    @apply text-4xl font-bold;
+  }
+
+  h3 {
+    @apply text-3xl font-bold;
+  }
+
+  h4 {
+    @apply text-2xl font-bold;
+  }
 }

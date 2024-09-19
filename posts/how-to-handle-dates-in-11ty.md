@@ -31,13 +31,15 @@ date: Last Modified
 
 Use `toLocaleString` to format your date
 
+{% raw %}
+
 ```html
-{{page.date.toLocaleString()}}
+<!-- In a page  -->
+{{ page.date.toLocaleString()}}
 ```
 
-or
-
 ```js
+// Or custom filter
 eleventyConfig.addFilter("postDate", (dateObj) => {
   return dateObj.toLocaleString(undefined, {
     year: "numeric",
@@ -46,6 +48,8 @@ eleventyConfig.addFilter("postDate", (dateObj) => {
   });
 });
 ```
+
+{% endraw %}
 
 ## The Explanation
 
