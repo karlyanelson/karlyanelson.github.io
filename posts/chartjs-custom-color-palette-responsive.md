@@ -22,7 +22,7 @@ techStack:
 
 ## The Problem
 
-I have a charts that can have many lines or bars, and, as of this writing, [ChartJS only has 7 colors out of the box](https://www.chartjs.org/docs/4.4.4/general/colors.html). You can put custom colors per dataset, but my datasets are dynamic. I just wanted to be able to have a longer list of available colors that ChartJS could automatically loop through.
+I have a chart that can have many lines or bars and, as of this writing, [ChartJS only has 7 colors out of the box](https://www.chartjs.org/docs/4.4.4/general/colors.html). You can put custom colors per dataset, but my datasets are dynamic. I just wanted to be able to have a longer list of available colors that ChartJS could automatically loop through.
 
 ## Solution Summary
 
