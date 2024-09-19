@@ -3,7 +3,7 @@ layout: post.njk
 tags: post
 title: How to handle dates in Eleventy (11ty)
 date: Last Modified
-draft: true
+description: Use the last modified date of post and format it nicely in Eleventy.
 techStack:
   - name: Eleventy (11ty)
     version: 2.0
@@ -16,9 +16,10 @@ techStack:
     url: https://learnxinyminutes.com/docs/yaml/
 ---
 
-## The Problem
+## The Problems
 
-You want to show the last modified date of a post (or item in any collection) without having to remember to edit it manually every time.
+1. You want to show the last modified date of a post (or item in any collection) without having to remember to edit it manually every time.
+2. You want to format a date nicely.
 
 ## Solution Summary
 
@@ -28,9 +29,23 @@ Use "Last Modified" for you date in your [frontmatter](https://www.11ty.dev/docs
 date: Last Modified
 ```
 
+Use `toLocaleString` to format your date
+
+```js
+eleventyConfig.addFilter("postDate", (dateObj) => {
+  return dateObj.toLocaleString(undefined, {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+});
+```
+
 ## The Explanation
 
-### Update frontmatter
+### Use last modified date
+
+#### Update frontmatter
 
 In your 11ty collection item, update the `date` in your frontmatter. For example, the frontmatter of this post (posts/how-to-handle-dates-in-11ty.md) is:
 
@@ -48,7 +63,7 @@ The content of your post goes here...
 
 I use [YAML syntax](https://learnxinyminutes.com/docs/yaml/). You can use (other formats too)[https://www.11ty.dev/docs/data-frontmatter/#alternative-front-matter-formats].
 
-### Use in pages
+#### Use in pages
 
 You can then use the date in pages or layouts.
 
@@ -58,7 +73,7 @@ For example, in my `posts/index.njk` page I have a list of posts:
 
 ```html
 {%- for post in collections.post -%}
-<li class="my-6">
+<li>
   <a href="{{ post.url }}">
     <h2>{{ post.data.title }}</h2>
     <p>Last updated: {{ post.date }}</p>
@@ -112,7 +127,13 @@ You can pass options to [toLocalString()](https://developer.mozilla.org/en-US/do
 
 #### Example toLocalString formatting
 
-If we want our date formatted like `September 19, 2024`, we'd pass in the options:
+`toLocaleString` takes two arguments, `locales` and `options`, like `toLocaleString(locales, options)`;
+
+`locales` is a string. For the locales we can either define one like `"en-US"` or `"ko-KR"` and it will render the dates how they should look in those places (the US and Korea, respectively).
+
+If we just want it to render based on where the user is located, we pass in `undefined` so it will grab the user's default language for their locale.
+
+`options` is an object. If we want our date formatted like `September 19, 2024`, we'd pass in the `options` like this:
 
 ```js
 {
@@ -122,52 +143,85 @@ If we want our date formatted like `September 19, 2024`, we'd pass in the option
 }
 ```
 
-In `_includes/post.njk`:
+[Read the docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options) to see all your options.
+
+How we'd use this in `_includes/post.njk`:
 {% raw %}
 
-```js
+```html
 <p>
-  Last updated: {{page.date.toLocaleString( "en-US", { year: 'numeric', month:
+  Last updated: {{page.date.toLocaleString( undefined, { year: 'numeric', month:
   'long', day: 'numeric' })}}
 </p>
 ```
 
 {% endraw %}
 
-In `posts/index.njk`:
+How we'd use this in `posts/index.njk`:
 
 {% raw %}
 
-```js
+```html
 {%- for post in collections.post -%}
-    <li class="my-6">
-    <a href="{{ post.url }}">
-        <h2>{{ post.data.title }}</h2>
-        <p>
-        Last updated: {{post.date.toLocaleString( "en-US", { year: 'numeric',
-        month: 'long', day: 'numeric' })}}
-        </p>
-    </a>
-    </li>
+<li>
+  <a href="{{ post.url }}">
+    <h2>{{ post.data.title }}</h2>
+    <p>
+      Last updated: {{post.date.toLocaleString( undefined, { year: 'numeric',
+      month: 'long', day: 'numeric' })}}
+    </p>
+  </a>
+</li>
 {%- endfor -%}
 ```
 
 {% endraw %}
 
-### Make custom filter to use same formatting options across pages
+#### Make custom filter to use same formatting options across pages
 
-This works in both places, but since we're using the same `toLocaleString( "en-US", { year: 'numeric',month: 'long', day: 'numeric' })` options in multiple places, it'd probably make more sense to make our own date [filter](https://www.11ty.dev/docs/filters/).
+This works in both places, but since we're using the same `toLocaleString( undefined, { year: 'numeric',month: 'long', day: 'numeric' })` options in multiple places, it'd probably make more sense to make our own date [filter](https://www.11ty.dev/docs/filters/).
 
 In our `.eleventy.js` at the root of our 11ty project, we're going to use the `addFilter` function, like this:
 
 ```js
-const { DateTime } = require("luxon");
-
 module.exports = function (eleventyConfig) {
   // put your other configurations and functions alongside this one inside of `module.exports`
   // there can only be one `module.exports` inside of `.eleventy.js`
   eleventyConfig.addFilter("postDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
+    // Can use toLocaleString the same way we were before
+    return dateObj.toLocaleString(undefined, {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
   });
 };
 ```
+
+Then use the new filter we've made in our pages.
+
+How we'd use this in `_includes/post.njk`:
+{% raw %}
+
+```html
+<p>Last updated: {{page.date | postDate}}</p>
+```
+
+{% endraw %}
+
+How we'd use this in `posts/index.njk`:
+
+{% raw %}
+
+```html
+{%- for post in collections.post -%}
+<li>
+  <a href="{{ post.url }}">
+    <h2>{{ post.data.title }}</h2>
+    <p>Last updated: {{post.date | postDate}}</p>
+  </a>
+</li>
+{%- endfor -%}
+```
+
+{% endraw %}

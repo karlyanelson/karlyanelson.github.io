@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{% block title %}Karly Nelson{% endblock %} - {{title}}</title>
+    <title> {{title}} - Karly Nelson</title>
     <meta charset="UTF-8" />
     {% if description %}
-    <meta name="description" content="{{description}}" />
+    <meta name="description" content="{{description}} {% if techStack %}{%- for tech in techStack -%} | {{ tech.name }}{% if tech.version %}v{{tech.version}} {% endif %}{%- endfor -%}{% endif %}" />
     {% endif %}
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta

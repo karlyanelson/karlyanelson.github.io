@@ -92,7 +92,7 @@ footer a {
 code[class*="language-"],
 pre[class*="language-"] {
   font-size: 0.875em;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 code {
@@ -101,15 +101,15 @@ code {
 }
 
 ._chip-base {
-  @apply inline-block border border-solid  px-2 py-1 rounded-lg;
+  @apply inline-block border border-solid text-sm px-2 py-1 rounded-lg;
 }
 
 .chip {
-  @apply _chip-base border-secondary text-secondary text-xs;
+  @apply _chip-base border-secondary text-secondary;
 }
 
 .chip-action {
-  @apply _chip-base border-action text-action text-sm bg-action-card-hover;
+  @apply _chip-base border-action text-action bg-action-card-hover;
 }
 
 .article-content h1 {
@@ -121,20 +121,34 @@ code {
 }
 
 .article-content h3 {
-  @apply text-3xl font-bold mt-10 mb-4;
+  @apply text-4xl font-bold mt-16 mb-4;
+}
+
+.article-content h2 + h3,
+.article-content h3 + h4 {
+  @apply mt-6;
 }
 
 .article-content h4 {
-  @apply text-2xl font-bold mt-8 mb-4;
+  @apply text-3xl font-bold mt-16 mb-4;
 }
 
 .article-content p {
   @apply my-4;
 }
 
+.article-content pre + p {
+  @apply mt-8;
+}
+
+.article-content ol {
+  list-style-type: decimal;
+  padding-inline-start: 2rem;
+}
+
 .toc ol {
   list-style-type: disc;
-  padding-inline-start: 40px;
+  padding-inline-start: 2rem;
 }
 
 .toc li {

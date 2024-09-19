@@ -3,6 +3,8 @@ layout: post.njk
 tags: post
 title: How to add your own custom color palette to Chart JS
 date: Last Modified
+description: Be able to have a longer list of available colors that ChartJS can automatically loop through.
+
 techStack:
   - name: Typescript
     version: 5.1
@@ -185,7 +187,7 @@ export default function MyCoolChart() {
 }
 ```
 
-#### Bonus: How to make the chart responsive
+## Bonus Points: How to make the chart responsive
 
 ```tsx
 const options = {
@@ -205,7 +207,3 @@ return (
 ## Example of it in action
 
 I made a CodeSandbox - [chart-js-custom-colors - CodeSandbox](https://codesandbox.io/s/chart-js-custom-colors-zyn2p6)
-
-<iframe class="w-full h-[600px] border-none mt-8"
-  src="https://codesandbox.io/p/sandbox/chart-js-custom-colors-zyn2p6?file=%2Fsrc%2Findex.js"
-></iframe>
