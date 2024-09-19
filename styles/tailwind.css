@@ -32,12 +32,15 @@
   }
 
   .title-display {
+    /* font-family: "Satisfy", "Tiny5", "Courier New", Courier, monospace; */
     font-family: "Tiny5", "Courier New", Courier, monospace;
   }
 }
 
 body {
   font-family: "Karla", Helvetica, Arial, sans-serif;
+  font-size: 1.125rem;
+  min-height: 100vh;
   @apply bg-white dark:bg-slate-800 text-primary;
 }
 
@@ -45,8 +48,11 @@ h1 {
   @apply title-display font-extrabold text-7xl;
 }
 
-a {
+a:not(.text-primary) {
   @apply text-action;
+}
+
+a {
   text-decoration: none;
   font-weight: 600;
   display: inline-block;
@@ -74,4 +80,26 @@ a {
 header a,
 footer a {
   @apply fancy-hover;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  font-size: 0.875em;
+  margin: 2rem 0;
+}
+
+.chip {
+  @apply inline-block border border-solid border-secondary text-secondary text-xs px-2 py-1 rounded-lg;
+}
+
+article h2 {
+  @apply title-display text-5xl font-bold mt-12 mb-4;
+}
+
+article h3 {
+  @apply title-display text-3xl font-bold mt-10 mb-4;
+}
+
+article h4 {
+  @apply title-display text-2xl font-bold mt-8 mb-4;
 }

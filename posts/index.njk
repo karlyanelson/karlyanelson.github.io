@@ -19,9 +19,9 @@ published: Sept 18, 2024
           {%- endif -%}
         </p>
 
-        <ul>
+        <ul class="flex items-center flex-wrap gap-4">
           {%- for tech in post.data.techStack -%}
-            <li class="inline-block border border-solid border-secondary text-secondary text-xs px-2 py-1 rounded-lg mr-2">{{ tech }}</li>
+            <li class="chip">{{ tech }}</li>
           {%- endfor -%}
           </ul>
       </a>

@@ -11,8 +11,9 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
     />
+    {# See themes at https://unpkg.com/browse/prismjs@1.20.0/themes/ #}
     <link
-      href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css"
+      href="https://unpkg.com/prismjs@1.20.0/themes/prism-twilight.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/style.css?v={% version %}" />
@@ -35,6 +36,18 @@
       href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Google tag (gtag.js) -->
     <script
@@ -53,21 +66,22 @@
     {% block head %}{% endblock %}
     <script defer src="/js/alpine.js?v={% version %}"></script>
   </head>
-  <body>
-    <header class="flex items-center justify-between px-8 max-w-7xl mx-auto">
-      <span class="title-display">Karly Nelson</span>
-
-      <nav>
+  <body class="flex flex-col">
+    <header
+      class="flex-none flex items-center justify-between flex-wrap gap-8 p-8 max-w-7xl mx-auto title-display text-2xl w-full"
+    >
+      <a href="/" class="text-primary">Karly Nelson</a>
+      <nav class="flex items-center gap-8">
         <a href="/">About Me</a>
-        <a href="/articles">Articles</a>
+        <a href="/posts">Writing</a>
       </nav>
     </header>
-    <main class="px-6 max-w-5xl mx-auto">
+    <main class="flex-1 px-6 max-w-5xl mx-auto">
       {% block content %} {{ content | safe }} {% endblock %}
     </main>
 
     <footer
-      class="text-secondary flex items-center justify-between px-8 max-w-7xl mx-auto"
+      class="text-secondary flex items-center justify-between p-8 max-w-7xl mx-auto w-full"
     >
       <p>&copy; 2024 Karly Nelson</p>
       <p>

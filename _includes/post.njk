@@ -3,22 +3,22 @@ layout: default.njk
 ---
 
 <article>
-  <h1>{{title}}</h1>
-
-  <p>{{description}}</p>
+  <h1 class="mt-16 mb-8">{{title}}</h1>
 
   {% if publishedDate %}
-  <p>Published: {{publishedDate}}</p>
-  {% endif %} {% if updatedDate %}
-  <p>Last updated: {{updatedDate}}</p>
+  <p class="text-secondary text-sm">
+    Published: {{publishedDate}} {% endif %} {% if updatedDate %} • Last
+    updated: {{updatedDate}}
+  </p>
   {% endif %}
 
-  <h2>Technologies Used</h2>
-  <ul>
+  <ul class="flex items-center flex-wrap gap-4 mt-4 mb-6">
     {% for tech in techStack %}
-    <li>{{tech}}</li>
+    <li class="chip">{{tech}}</li>
     {% endfor %}
   </ul>
 
-  <div>{{ content | safe }}</div>
+  <hr />
+
+  <div class="mt-16">{{ content | safe }}</div>
 </article>
