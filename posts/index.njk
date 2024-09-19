@@ -15,7 +15,7 @@ published: Sept 18, 2024
   </div>
 
   <ul>
-    {%- for post in collections.post -%}
+    {%- for post in collections.post | reverse -%}
     <li class="my-6">
       <a
         class="block p-8 border border-solid rounded border-action fancy-hover bg-action-card-hover"
@@ -30,7 +30,8 @@ published: Sept 18, 2024
         {% endif %}
         <h2 class="font-bold text-2xl">{{ post.data.title }}</h2>
         <p class="text-secondary font-light text-sm my-2">
-          Last updated: {{ post.date }}
+          Last updated: {{post.date.toLocaleString( "en-US", { year: 'numeric',
+          month: 'long', day: 'numeric' })}}
         </p>
 
         <ul class="flex items-center flex-wrap gap-4">

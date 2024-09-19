@@ -13,7 +13,7 @@ layout: default.njk
 
   <h1 class="mb-8">{{title}}</h1>
 
-  <p class="text-secondary text-sm">Last updated: {{page.date}}</p>
+  <p class="text-secondary text-sm">Last updated: {{page.date | postDate}}</p>
 
   <ul class="flex items-center flex-wrap gap-4 mt-4 mb-6">
     {% for tech in techStack %}

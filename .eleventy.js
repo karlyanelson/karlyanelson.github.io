@@ -59,29 +59,34 @@ module.exports = function (eleventyConfig) {
   // automatically generates table of contents based on heading links
   eleventyConfig.addPlugin(pluginTOC);
 
-  // When `eleventyExcludeFromCollections` is true, the file is not included in any collections
-  eleventyConfig.addGlobalData(
-    "eleventyComputed.eleventyExcludeFromCollections",
-    function () {
-      return (data) => {
-        // Always exclude from non-watch/serve builds
-        if (data.draft && !process.env.BUILD_DRAFTS) {
-          return true;
-        }
-
-        return data.eleventyExcludeFromCollections;
-      };
-    }
-  );
-
-  eleventyConfig.on("eleventy.before", ({ runMode }) => {
-    // Set the environment variable
-    if (runMode === "serve" || runMode === "watch") {
-      process.env.BUILD_DRAFTS = true;
-    }
+  eleventyConfig.addFilter("postDate", (dateObj) => {
+    return dateObj.toLocaleString(undefined, {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
   });
 
-  return {
-    markdownTemplateEngine: "njk",
-  };
+  // //// Don't show drafts in production https://www.11ty.dev/docs/quicktips/draft-posts/
+  // // When `eleventyExcludeFromCollections` is true, the file is not included in any collections
+  // eleventyConfig.addGlobalData(
+  //   "eleventyComputed.eleventyExcludeFromCollections",
+  //   function () {
+  //     return (data) => {
+  //       // Always exclude from non-watch/serve builds
+  //       if (data.draft && !process.env.BUILD_DRAFTS) {
+  //         return true;
+  //       }
+
+  //       return data.eleventyExcludeFromCollections;
+  //     };
+  //   }
+  // );
+
+  // eleventyConfig.on("eleventy.before", ({ runMode }) => {
+  //   // Set the environment variable
+  //   if (runMode === "serve" || runMode === "watch") {
+  //     process.env.BUILD_DRAFTS = true;
+  //   }
+  // });
 };

@@ -95,6 +95,11 @@ pre[class*="language-"] {
   margin: 2rem 0;
 }
 
+code {
+  font-size: 0.75em;
+  @apply bg-slate-600 rounded-lg py-1 px-2;
+}
+
 ._chip-base {
   @apply inline-block border border-solid  px-2 py-1 rounded-lg;
 }
@@ -112,7 +117,7 @@ pre[class*="language-"] {
 }
 
 .article-content h2 {
-  @apply text-5xl font-bold mt-20 mb-4;
+  @apply text-5xl font-bold mt-16 mb-4;
 }
 
 .article-content h3 {
@@ -121,6 +126,10 @@ pre[class*="language-"] {
 
 .article-content h4 {
   @apply text-2xl font-bold mt-8 mb-4;
+}
+
+.article-content p {
+  @apply my-4;
 }
 
 .toc ol {
