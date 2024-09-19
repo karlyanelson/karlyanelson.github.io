@@ -204,5 +204,8 @@ return (
 
 ## Example of it in action
 
-I made a CodeSandbox -
-[chart-js-custom-colors - CodeSandbox](https://codesandbox.io/s/chart-js-custom-colors-zyn2p6)
+I made a CodeSandbox - [chart-js-custom-colors - CodeSandbox](https://codesandbox.io/s/chart-js-custom-colors-zyn2p6)
+
+<iframe class="w-full h-[600px] border-none mt-8"
+  src="https://codesandbox.io/p/sandbox/chart-js-custom-colors-zyn2p6?file=%2Fsrc%2Findex.js"
+></iframe>

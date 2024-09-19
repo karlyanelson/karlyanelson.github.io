@@ -7,26 +7,39 @@ published: Sept 18, 2024
 ---
 
 <div>
-<div class="mb-12">
-  <h1 class="mb-2">Articles</h1>
-  <p class="text-secondary">How-to articles on various specific problems I've solved.</p>
-</div>
+  <div class="mb-12">
+    <h1 class="mb-2">Articles</h1>
+    <p class="text-secondary">
+      How-to articles on various specific problems I've solved.
+    </p>
+  </div>
 
-<ul>
-{%- for post in collections.post -%}
-  <li{% if page.url == post.url %} aria-current="page"{% endif %} class="my-6">
-    <a class="block p-8 border border-solid rounded border-action fancy-hover bg-action-card-hover" href="{{ post.url }}">
-      <h2 class="font-bold text-2xl ">{{ post.data.title }}</h2>
-        <p class="text-secondary font-light text-sm my-2">Last updated: {{ page.date }}</p>
+  <ul>
+    {%- for post in collections.post -%}
+    <li class="my-6">
+      <a
+        class="block p-8 border border-solid rounded border-action fancy-hover bg-action-card-hover"
+        href="{{ post.url }}"
+      >
+        {% if post.data.draft %}
+        <span
+          class="text-xs bg-orange-900 text-white font-bold px-2 py-1 rounded-full inline-block mb-2"
+        >
+          🚧 Under Construction
+        </span>
+        {% endif %}
+        <h2 class="font-bold text-2xl">{{ post.data.title }}</h2>
+        <p class="text-secondary font-light text-sm my-2">
+          Last updated: {{ post.date }}
+        </p>
 
         <ul class="flex items-center flex-wrap gap-4">
           {%- for tech in post.data.techStack -%}
-            <li class="chip">{{ tech.name }} v{{tech.version}}</li>
+          <li class="chip">{{ tech.name }} v{{tech.version}}</li>
           {%- endfor -%}
-          </ul>
+        </ul>
       </a>
-  </li>
-{%- endfor -%}
-</ul>
+    </li>
+    {%- endfor -%}
+  </ul>
 </div>
-

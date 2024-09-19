@@ -7,15 +7,19 @@ const markdownItAnchor = require("markdown-it-anchor");
 const now = String(Date.now());
 
 module.exports = function (eleventyConfig) {
+  // CSS
   eleventyConfig.addWatchTarget("./styles/tailwind.config.js");
   eleventyConfig.addWatchTarget("./styles/tailwind.css");
 
+  // Alpine JS
   eleventyConfig.addPassthroughCopy({
     "./node_modules/alpinejs/dist/cdn.js": "./js/alpine.js",
   });
 
+  // Favicon
   eleventyConfig.addPassthroughCopy({ "./favicon": "/" });
 
+  // Netlify Functions
   eleventyConfig.addPassthroughCopy("./_redirects");
   eleventyConfig.addPassthroughCopy("./functions");
   eleventyConfig.addPassthroughCopy("netlify.toml");
@@ -46,7 +50,38 @@ module.exports = function (eleventyConfig) {
 
   // Table of contents
   // Add anchor links to headings
-  eleventyConfig.setLibrary("md", markdownIt().use(markdownItAnchor));
+  let options = {
+    html: true,
+    breaks: true,
+    linkify: true,
+  };
+  eleventyConfig.setLibrary("md", markdownIt(options).use(markdownItAnchor));
   // automatically generates table of contents based on heading links
   eleventyConfig.addPlugin(pluginTOC);
+
+  // When `eleventyExcludeFromCollections` is true, the file is not included in any collections
+  eleventyConfig.addGlobalData(
+    "eleventyComputed.eleventyExcludeFromCollections",
+    function () {
+      return (data) => {
+        // Always exclude from non-watch/serve builds
+        if (data.draft && !process.env.BUILD_DRAFTS) {
+          return true;
+        }
+
+        return data.eleventyExcludeFromCollections;
+      };
+    }
+  );
+
+  eleventyConfig.on("eleventy.before", ({ runMode }) => {
+    // Set the environment variable
+    if (runMode === "serve" || runMode === "watch") {
+      process.env.BUILD_DRAFTS = true;
+    }
+  });
+
+  return {
+    markdownTemplateEngine: "njk",
+  };
 };

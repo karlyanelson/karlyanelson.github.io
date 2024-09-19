@@ -73,7 +73,7 @@ a {
   height: 4px;
   width: 0%;
   position: absolute;
-  bottom: -4px;
+  bottom: -2px;
   left: 0;
   right: 0;
 }
@@ -132,6 +132,7 @@ pre[class*="language-"] {
   margin-top: 0.25rem;
 }
 
+.article-content a,
 .toc a {
   @apply fancy-hover;
 }

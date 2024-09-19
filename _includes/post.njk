@@ -2,7 +2,15 @@
 layout: default.njk
 ---
 
-<article class="">
+<article>
+  {% if draft %}
+  <span
+    class="text-lg bg-orange-900 text-white font-bold px-2 py-1 rounded-full inline-block mb-2"
+  >
+    🚧 Under Construction
+  </span>
+  {% endif %}
+
   <h1 class="mb-8">{{title}}</h1>
 
   <p class="text-secondary text-sm">Last updated: {{page.date}}</p>
