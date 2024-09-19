@@ -2,7 +2,7 @@
 layout: default.njk
 ---
 
-<article>
+<article class="">
   <h1 class="mb-8">{{title}}</h1>
 
   {% if publishedDate %}
@@ -19,6 +19,10 @@ layout: default.njk
   </ul>
 
   <hr />
+  <aside class="mt-8">
+    <h2 class="text-xl">Table of Contents</h2>
+    {{ content | toc | safe }}
+  </aside>
 
   <div class="mt-16">{{ content | safe }}</div>
 </article>

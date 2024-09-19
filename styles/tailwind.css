@@ -19,6 +19,10 @@
     @apply bg-sky-700 dark:bg-sky-400;
   }
 
+  .bg-action-card-hover {
+    @apply hover:bg-sky-700  hover:bg-opacity-15 dark:hover:bg-sky-400 dark:hover:bg-opacity-15;
+  }
+
   .border-action {
     @apply border-sky-700 dark:border-sky-400;
   }
@@ -109,4 +113,19 @@ article h3 {
 
 article h4 {
   @apply text-2xl font-bold mt-8 mb-4;
+}
+
+.toc ol {
+  list-style-type: disc;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.toc li {
+  margin-top: 0.25rem;
+}
+
+.toc a {
+  @apply fancy-hover;
 }

@@ -3,8 +3,6 @@ layout: post.njk
 tags: post
 title: How to add your own custom color palette to Chart JS
 publishedDate: September 18, 2024
-updatedDate: September 18, 2024
-inProgress: true
 techStack:
   - Typescript v5
   - Chart JS (react-chartjs-2 v5.2)
@@ -16,11 +14,12 @@ techStack:
 Based this off of how ChartJS does their [Colors](https://www.chartjs.org/docs/latest/general/colors.html) plugin
 
 ```ts
-// chart-colors.ts
+//// chart-colors.ts
 
 import type { Chart, ChartDataset } from "chart.js";
 import { DoughnutController, PolarAreaController } from "chart.js";
 
+// list of your custom colors
 const BORDER_COLORS = [
   "rgb(54, 162, 235)",
   "rgb(255, 99, 132)",
@@ -28,7 +27,7 @@ const BORDER_COLORS = [
   "rgb(255, 205, 86)",
   "rgb(75, 192, 192)",
   "rgb(153, 102, 255)",
-  "rgb(201, 203, 207)", // grey
+  "rgb(201, 203, 207)",
   "rgb(161, 77, 160)",
   "rgb(1, 240, 139)",
   "rgb(255, 44, 44)",
@@ -44,6 +43,7 @@ const BORDER_COLORS = [
   "rgb(255, 136, 222)",
   "rgb(228, 96, 0)",
 ];
+
 // Border colors with 75% transparency
 const BACKGROUND_COLORS = /* #__PURE__ */ BORDER_COLORS.map((color) =>
   color.replace("rgb(", "rgba(").replace(")", ", 0.75)")
@@ -105,7 +105,7 @@ export const customChartColors = {
 Using [react-chartjs-2](https://react-chartjs-2.js.org/)
 
 ```tsx
-// your chart component file
+//// your chart component file - MyCoolChart.tsx
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -122,11 +122,13 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 
+// The custom color plugin we made
 import { customChartColors } from "./chart-colors";
 
+// Your data you feed to the chart
 import { data } from "./data";
 
-export default function App() {
+export default function MyCoolChart() {
   ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -162,7 +164,7 @@ export default function App() {
 }
 ```
 
-### Note: This makes the chart responsive:
+### Note: How to make the chart responsive
 
 ```tsx
 const options = {

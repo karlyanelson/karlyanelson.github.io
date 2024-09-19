@@ -1,5 +1,8 @@
 const htmlmin = require("html-minifier-terser");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const pluginTOC = require("eleventy-plugin-toc");
+const markdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor");
 
 const now = String(Date.now());
 
@@ -38,5 +41,12 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
+  // syntax highlighting for code blocks in markdown files
   eleventyConfig.addPlugin(syntaxHighlight);
+
+  // Table of contents
+  // Add anchor links to headings
+  eleventyConfig.setLibrary("md", markdownIt().use(markdownItAnchor));
+  // automatically generates table of contents based on heading links
+  eleventyConfig.addPlugin(pluginTOC);
 };
