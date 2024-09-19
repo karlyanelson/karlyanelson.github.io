@@ -19,6 +19,9 @@ module.exports = function (eleventyConfig) {
   // Favicon
   eleventyConfig.addPassthroughCopy({ "./favicon": "/" });
 
+  // Images
+  eleventyConfig.addPassthroughCopy({ "./images": "./images" });
+
   // Netlify Functions
   eleventyConfig.addPassthroughCopy("./_redirects");
   eleventyConfig.addPassthroughCopy("./functions");

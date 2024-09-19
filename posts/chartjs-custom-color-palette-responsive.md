@@ -187,6 +187,12 @@ export default function MyCoolChart() {
 }
 ```
 
+### Example of it in action
+
+I made a CodeSandbox - [chart-js-custom-colors - CodeSandbox](https://codesandbox.io/s/chart-js-custom-colors-zyn2p6)
+
+![ChartJS Custom Colors Example](/images/chartjs-custom-color-palette-responsive/chartjs-multi-line.png)
+
 ## Bonus Points: How to make the chart responsive
 
 ```tsx
@@ -203,7 +209,3 @@ return (
   </div>
 );
 ```
-
-## Example of it in action
-
-I made a CodeSandbox - [chart-js-custom-colors - CodeSandbox](https://codesandbox.io/s/chart-js-custom-colors-zyn2p6)
