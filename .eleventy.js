@@ -1,4 +1,5 @@
 const htmlmin = require("html-minifier-terser");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 const now = String(Date.now());
 
@@ -36,4 +37,6 @@ module.exports = function (eleventyConfig) {
 
     return content;
   });
+
+  eleventyConfig.addPlugin(syntaxHighlight);
 };
