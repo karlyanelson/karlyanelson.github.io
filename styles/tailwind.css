@@ -95,8 +95,16 @@ pre[class*="language-"] {
   margin: 2rem 0;
 }
 
+._chip-base {
+  @apply inline-block border border-solid  px-2 py-1 rounded-lg;
+}
+
 .chip {
-  @apply inline-block border border-solid border-secondary text-secondary text-xs px-2 py-1 rounded-lg;
+  @apply _chip-base border-secondary text-secondary text-xs;
+}
+
+.chip-action {
+  @apply _chip-base border-action text-action text-sm bg-action-card-hover;
 }
 
 .article-content h1 {
@@ -104,7 +112,7 @@ pre[class*="language-"] {
 }
 
 .article-content h2 {
-  @apply text-5xl font-bold mt-12 mb-4;
+  @apply text-5xl font-bold mt-20 mb-4;
 }
 
 .article-content h3 {

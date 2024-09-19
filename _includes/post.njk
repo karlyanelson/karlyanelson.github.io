@@ -5,16 +5,15 @@ layout: default.njk
 <article class="">
   <h1 class="mb-8">{{title}}</h1>
 
-  {% if publishedDate %}
-  <p class="text-secondary text-sm">
-    Published: {{publishedDate}} {% endif %} {% if updatedDate %} • Last
-    updated: {{updatedDate}}
-  </p>
-  {% endif %}
+  <p class="text-secondary text-sm">Last updated: {{page.date}}</p>
 
   <ul class="flex items-center flex-wrap gap-4 mt-4 mb-6">
     {% for tech in techStack %}
-    <li class="chip">{{tech}}</li>
+    <li class="chip-action">
+      <a href="{{tech.url}}" target="_blank"
+        >{{tech.name}} {% if tech.version %}v{{tech.version}} {% endif %}</a
+      >
+    </li>
     {% endfor %}
   </ul>
 

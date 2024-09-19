@@ -2,16 +2,37 @@
 layout: post.njk
 tags: post
 title: How to add your own custom color palette to Chart JS
-publishedDate: September 18, 2024
+date: Last Modified
 techStack:
-  - Typescript v5
-  - Chart JS (react-chartjs-2 v5.2)
-  - React v19
+  - name: Typescript
+    version: 5.1
+    url: https://www.typescriptlang.org/
+  - name: Chart JS
+    version: 4.4
+    url: https://www.chartjs.org/docs/4.4.4/
+  - name: react-chartjs-2
+    version: 5.2
+    url: https://github.com/reactchartjs/react-chartjs-2
+  - name: React
+    version: 18.3
+    url: https://react.dev/
 ---
 
-## Make your own custom Colors plugin
+## The Problem
 
-Based this off of how ChartJS does their [Colors](https://www.chartjs.org/docs/latest/general/colors.html) plugin
+I have a charts that can have many lines or bars, and, as of this writing, [ChartJS only has 7 colors out of the box](https://www.chartjs.org/docs/4.4.4/general/colors.html). You can put custom colors per dataset, but my datasets are dynamic. I just wanted to be able to have a longer list of available colors that ChartJS could automatically loop through.
+
+## Solution Summary
+
+I copied ChartJS's Colors plugin ([docs](https://www.chartjs.org/docs/latest/general/colors.html), [source code](https://github.com/chartjs/Chart.js/blob/master/src/plugins/plugin.colors.ts)) and modified it to have a longer list of colors.
+
+## The Explanation
+
+### Make your own custom Colors plugin
+
+I based this off of how ChartJS does their Colors plugin ([docs](https://www.chartjs.org/docs/latest/general/colors.html), [source code](https://github.com/chartjs/Chart.js/blob/master/src/plugins/plugin.colors.ts)). The following examples are in Typescript, but could also work in Javascript if you take out all the type stuff.
+
+The 75% transparency is optional. If you just want your colors at 100% all the time, you can use hex values like `#FFFFFF` instead of `rgb(255, 255, 255)` and get rid of the `BACKGROUND_COLORS` logic.
 
 ```ts
 //// chart-colors.ts
@@ -100,7 +121,7 @@ export const customChartColors = {
 };
 ```
 
-## Use it in your chart
+### Use it in your chart
 
 Using [react-chartjs-2](https://react-chartjs-2.js.org/)
 
@@ -164,7 +185,7 @@ export default function MyCoolChart() {
 }
 ```
 
-### Note: How to make the chart responsive
+#### Bonus: How to make the chart responsive
 
 ```tsx
 const options = {

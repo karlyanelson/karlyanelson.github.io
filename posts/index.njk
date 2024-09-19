@@ -17,15 +17,11 @@ published: Sept 18, 2024
   <li{% if page.url == post.url %} aria-current="page"{% endif %} class="my-6">
     <a class="block p-8 border border-solid rounded border-action fancy-hover bg-action-card-hover" href="{{ post.url }}">
       <h2 class="font-bold text-2xl ">{{ post.data.title }}</h2>
-        <p class="text-secondary font-light text-sm my-2">Published: {{ post.data.publishedDate}}
-          {%- if post.data.updatedDate -%}
-            <span> • Updated: {{ post.data.updatedDate }}</span>
-          {%- endif -%}
-        </p>
+        <p class="text-secondary font-light text-sm my-2">Last updated: {{ page.date }}</p>
 
         <ul class="flex items-center flex-wrap gap-4">
           {%- for tech in post.data.techStack -%}
-            <li class="chip">{{ tech }}</li>
+            <li class="chip">{{ tech.name }} v{{tech.version}}</li>
           {%- endfor -%}
           </ul>
       </a>
