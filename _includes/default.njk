@@ -58,16 +58,16 @@
   </head>
   <body>
     <header
-      class="flex items-center justify-between flex-wrap gap-8 p-8 max-w-7xl mx-auto title-display text-2xl w-full"
+      class="flex flex-col sm:flex-row items-center justify-center sm:justify-between flex-wrap gap-8 px-2 py-8 sm:p-8 max-w-7xl mx-auto title-display text-2xl w-full"
     >
-      <a href="/" class="text-primary-on-dark">Karly Nelson</a>
-      <nav class="flex items-center gap-1">
+      <a href="/" class="text-primary-on-dark font-extrabold">Karly Nelson</a>
+      <nav class="flex items-center justify-center flex-wrap gap-1">
         <a href="/" {% if page.url == '/' %}aria-current="page"{% endif %}>About Me</a>
         <a href="/posts" {% if '/posts' in page.url %}aria-current="page"{% endif %}>Articles</a>
         <a href="/search"{% if '/search' in page.url %}aria-current="page"{% endif %}>Search</a>
       </nav>
     </header>
-    <main class="mt-24 pb-6">
+    <main class="mt-10 sm:mt-24 pb-6">
       {% block content %} {{ content | safe }} {% endblock %}
     </main>
     <footer

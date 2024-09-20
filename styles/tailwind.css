@@ -86,9 +86,8 @@ html {
 }
 
 body {
-  font-size: 1.25rem;
   font-weight: 500;
-  @apply bg-main text-primary-on-dark font-family-basic min-h-screen grid grid-rows-[auto,1fr,auto];
+  @apply text-base sm:text-xl bg-main text-primary-on-dark font-family-basic min-h-screen grid grid-rows-[auto,1fr,auto];
 }
 
 .container {
@@ -116,7 +115,7 @@ h4 {
 /* Nav */
 
 header nav a {
-  @apply px-4 py-2 rounded text-primary-on-dark;
+  @apply px-4 py-2 rounded text-primary-on-dark text-lg sm:text-xl;
 }
 
 header nav a[aria-current="page"] {
