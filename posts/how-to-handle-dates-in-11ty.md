@@ -55,6 +55,8 @@ eleventyConfig.addFilter("postDate", (dateObj) => {
 
 ### Use last modified date
 
+How to exactly to use "Last Modified" date.
+
 #### Update frontmatter
 
 In your 11ty collection item, update the `date` in your frontmatter. For example, the frontmatter of this post (posts/how-to-handle-dates-in-11ty.md) is:
