@@ -32,13 +32,27 @@ layout: default.njk
     <details class="mt-8" open>
       <summary class="mb-4">Table of Contents</summary>
       <aside
-        class="border border-solid border-secondary-on-light px-4 py-6 rounded bg-slate-200 dark:bg-slate-900"
+        class="border border-solid border-secondary-on-light px-4 py-6 rounded bg-slate-900"
       >
         {{ content | toc | safe }}
       </aside>
     </details>
   </div>
-  <div class="mt-16 article-content pt-10 pb-40">
-    <div class="px-6 max-w-5xl mx-auto">{{ content | safe }}</div>
+
+  <svg
+    viewBox="0 0 540 40"
+    fill="none"
+    class="mt-24 w-full fill-article-bg relative -bottom-1"
+  >
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M540 29V40L0 40L0 5C35.9883 1.28005 74.0208 0.00543976 111.431 1.52588e-05C111.564 -3.81469e-06 111.698 -3.81469e-06 111.831 1.52588e-05C140.298 0.00414085 168.399 0.88972 194.96 2.36324C257.44 5.82911 316.489 11.0877 375.504 16.3431C429.499 21.1515 483.464 25.5723 540 29Z"
+    />
+  </svg>
+  <div class="article-content pt-1 pb-40">
+    <div class="px-6 max-w-5xl mx-auto relative -top-11">
+      {{ content | safe }}
+    </div>
   </div>
 </article>

@@ -20,7 +20,7 @@
   }
 
   .text-action-on-light {
-    @apply text-sky-700;
+    @apply text-sky-600;
   }
 
   .text-action-on-dark {
@@ -28,7 +28,7 @@
   }
 
   .bg-action-on-light {
-    @apply bg-sky-700;
+    @apply bg-sky-600;
   }
 
   .bg-action-on-dark {
@@ -44,7 +44,7 @@
   }
 
   .border-action-on-light {
-    @apply border-sky-700;
+    @apply border-sky-600;
   }
 
   .border-primary-on-light {
@@ -181,11 +181,19 @@ code:not([class*="language-"]) {
 
 /* Articles */
 
-.article-content {
-  @apply bg-slate-100 text-primary-on-light;
+.article-bg {
+  @apply bg-slate-300;
 }
 
-.article content a {
+.fill-article-bg {
+  @apply fill-slate-300;
+}
+
+.article-content {
+  @apply article-bg text-primary-on-light;
+}
+
+.article-content a {
   @apply text-action-on-light;
 }
 
