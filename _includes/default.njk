@@ -13,7 +13,7 @@
     />
     {# See themes at https://unpkg.com/browse/prismjs@1.20.0/themes/ #}
     <link
-      href="https://unpkg.com/prismjs@1.20.0/themes/prism-coy.css"
+      href="https://unpkg.com/prismjs@1.20.0/themes/prism-tomorrow.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/style.css?v={% version %}" />
@@ -56,8 +56,8 @@
     >
       <a href="/" class="text-primary-on-dark">Karly Nelson</a>
       <nav class="flex items-center gap-8">
-        <a href="/" {% if page.slug == "/" %} aria-current="page"{% endif %}>About Me</a>
-        <a href="/posts" {% if page.slug == "/posts" %} aria-current="page" style="background:red"{% endif %}>Articles</a>
+        <a href="/" {% if currentUrl === page.url %}aria-current="page"{% endif %}>About Me</a>
+        <a href="/posts" {% if currentUrl === page.url %}aria-current="page"{% endif %}>Articles</a>
       </nav>
     </header>
     <main class="mt-24 pb-6">

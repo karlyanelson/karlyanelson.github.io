@@ -73,17 +73,18 @@
   }
 }
 
-.main-bg {
-  @apply bg-slate-900;
+.bg-main {
+  @apply bg-sky-950;
 }
 
 .fill-main-bg {
-  @apply fill-slate-900;
+  @apply fill-sky-950;
 }
 
 body {
-  font-size: 1.125rem;
-  @apply main-bg text-primary-on-dark font-family-basic;
+  font-size: 1.25rem;
+  font-weight: 00;
+  @apply bg-main text-primary-on-dark font-family-basic;
 }
 
 /* Headings */
@@ -157,6 +158,7 @@ code[class*="language-"],
 pre[class*="language-"] {
   font-size: 0.875em;
   margin: 1rem 0;
+  @apply rounded-2xl;
 }
 
 code[class*="language-"] {
@@ -165,12 +167,16 @@ code[class*="language-"] {
 
 code:not([class*="language-"]) {
   font-size: 0.75em;
-  @apply bg-slate-600 rounded-lg py-1 px-2;
+  @apply bg-slate-200 rounded-lg py-1 px-2;
 }
 
 .article-content code:not([class*="language-"]) {
   font-size: 0.75em;
-  @apply bg-slate-300 rounded-lg py-1 px-2;
+  @apply bg-slate-200 rounded-lg py-1 px-2;
+}
+
+.article-content pre {
+  @apply bg-main;
 }
 
 /* Chips */
