@@ -74,7 +74,7 @@
 }
 
 .bg-main {
-  @apply bg-sky-950;
+  @apply bg-gradient-to-tl from-sky-950 to-blue-950;
 }
 
 .fill-main-bg {
@@ -83,8 +83,8 @@
 
 body {
   font-size: 1.25rem;
-  font-weight: 00;
-  @apply bg-main text-primary-on-dark font-family-basic;
+  font-weight: 500;
+  @apply bg-main text-primary-on-dark font-family-basic min-h-screen;
 }
 
 /* Headings */
@@ -176,7 +176,7 @@ code:not([class*="language-"]) {
 }
 
 .article-content pre {
-  @apply bg-main;
+  @apply bg-sky-950;
 }
 
 /* Chips */
