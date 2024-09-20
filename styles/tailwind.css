@@ -168,6 +168,7 @@ code[class*="language-"],
 pre[class*="language-"] {
   font-size: 0.875em;
   margin: 1rem 0;
+  white-space: pre-wrap;
   @apply rounded-2xl;
 }
 
