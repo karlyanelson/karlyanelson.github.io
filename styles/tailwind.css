@@ -24,7 +24,7 @@
   }
 
   .text-action-on-dark {
-    @apply text-sky-400;
+    @apply text-sky-300;
   }
 
   .bg-action-on-light {
@@ -32,15 +32,15 @@
   }
 
   .bg-action-on-dark {
-    @apply bg-sky-400;
+    @apply bg-sky-300;
   }
 
   .bg-action-card-hover-on-dark {
-    @apply hover:bg-sky-400 hover:bg-opacity-15;
+    @apply hover:bg-sky-300 hover:bg-opacity-15;
   }
 
   .border-action-on-dark {
-    @apply: border-sky-400;
+    @apply: border-sky-300;
   }
 
   .border-action-on-light {
@@ -74,7 +74,7 @@
 }
 
 .bg-main {
-  @apply bg-gradient-to-tl from-sky-950 to-blue-950;
+  @apply bg-sky-950 bg-gradient-to-tl from-sky-950 to-blue-950;
 }
 
 .fill-main-bg {
@@ -129,6 +129,7 @@ a {
   bottom: -2px;
   left: 0;
   right: 0;
+  border-radius: 2rem;
 }
 
 .fancy-hover::after {
