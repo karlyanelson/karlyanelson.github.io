@@ -11,11 +11,14 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
     />
-    {# See themes at https://unpkg.com/browse/prismjs@1.20.0/themes/ #}
+    {# Syntax highlighting - See themes at https://unpkg.com/browse/prismjs@1.20.0/themes/ #}
     <link
       href="https://unpkg.com/prismjs@1.20.0/themes/prism-tomorrow.css"
       rel="stylesheet"
     />
+    {# Search #}
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+    {# My Styles #}
     <link rel="stylesheet" href="/style.css?v={% version %}" />
     <!-- favicons -->
     <link rel="icon" href="/favicon.ico" />
@@ -32,6 +35,9 @@
       href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
+
+    {# Search - Pagefind JS #}
+    <script src="/pagefind/pagefind-ui.js"></script>
 
     <!-- Google tag (gtag.js) -->
     <script
@@ -55,9 +61,10 @@
       class="flex items-center justify-between flex-wrap gap-8 p-8 max-w-7xl mx-auto title-display text-2xl w-full"
     >
       <a href="/" class="text-primary-on-dark">Karly Nelson</a>
-      <nav class="flex items-center gap-8">
-        <a href="/" {% if currentUrl === page.url %}aria-current="page"{% endif %}>About Me</a>
-        <a href="/posts" {% if currentUrl === page.url %}aria-current="page"{% endif %}>Articles</a>
+      <nav class="flex items-center gap-1">
+        <a href="/" {% if page.url == '/' %}aria-current="page"{% endif %}>About Me</a>
+        <a href="/posts" {% if '/posts' in page.url %}aria-current="page"{% endif %}>Articles</a>
+        <a href="/search"{% if '/search' in page.url %}aria-current="page"{% endif %}>Search</a>
       </nav>
     </header>
     <main class="mt-24 pb-6">
@@ -76,4 +83,11 @@
       </p>
     </footer>
   </body>
+
+{# Search - PageFind #}
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ element: "#search", showSubResults: true });
+    });
+</script>
 </html>

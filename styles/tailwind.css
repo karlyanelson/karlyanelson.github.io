@@ -62,6 +62,14 @@
     @apply border-slate-300;
   }
 
+  .bg-main {
+    @apply bg-sky-950 bg-gradient-to-tl from-sky-950 to-blue-950;
+  }
+
+  .fill-main-bg {
+    @apply fill-sky-950;
+  }
+
   .font-family-basic {
     font-family: "Karla", Helvetica, Arial, sans-serif;
   }
@@ -73,18 +81,14 @@
   }
 }
 
-.bg-main {
-  @apply bg-sky-950 bg-gradient-to-tl from-sky-950 to-blue-950;
-}
-
-.fill-main-bg {
-  @apply fill-sky-950;
+html {
+  @apply min-h-screen;
 }
 
 body {
   font-size: 1.25rem;
   font-weight: 500;
-  @apply bg-main text-primary-on-dark font-family-basic min-h-screen;
+  @apply bg-main text-primary-on-dark font-family-basic min-h-screen grid grid-rows-[auto,1fr,auto];
 }
 
 /* Headings */
@@ -105,13 +109,21 @@ h4 {
   @apply text-3xl font-bold;
 }
 
+/* Nav */
+
+header nav a {
+  @apply px-4 py-2 rounded text-primary-on-dark;
+}
+
+header nav a[aria-current="page"] {
+  @apply bg-action-on-dark;
+  --tw-bg-opacity: 0.15;
+}
+
 /* Links */
 
 a {
-  @apply text-action-on-dark;
-}
-
-a {
+  @apply text-action-on-dark fancy-hover;
   text-decoration: none;
   font-weight: 600;
   display: inline-block;
@@ -145,12 +157,6 @@ a {
 .fancy-hover-on-light:hover::after,
 .fancy-hover-on-light:focus::after {
   width: 100%;
-}
-
-.about-me a,
-header a,
-footer a {
-  @apply fancy-hover;
 }
 
 /* Code blocks */
@@ -279,4 +285,14 @@ code:not([class*="language-"]) {
   h4 {
     @apply text-2xl font-bold;
   }
+}
+
+/* Page Find Search */
+
+body {
+  --pagefind-ui-primary: #eeeeee;
+  --pagefind-ui-text: #eeeeee;
+  --pagefind-ui-background: rgba(0, 0, 0, 0.25);
+  --pagefind-ui-border: white;
+  --pagefind-ui-tag: #152028;
 }
