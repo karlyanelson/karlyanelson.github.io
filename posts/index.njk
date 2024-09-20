@@ -19,7 +19,7 @@ description: How-to articles on various specific problems I've solved.
     {%- for post in collections.post | reverse -%}
     <li class="my-6">
       <a
-        class="block p-8 border border-solid rounded border-action-on-dark fancy-hover bg-action-card-hover-on-dark"
+        class="shadow-lg hover:shadow-2xl block p-6 border border-solid rounded border-slate-950 hover:border-action-on-dark bg-black bg-opacity-25 fancy-hover bg-action-card-hover-on-dark"
         href="{{ post.url }}"
       >
         {% if post.data.draft %}
@@ -29,19 +29,28 @@ description: How-to articles on various specific problems I've solved.
           🚧 Under Construction
         </span>
         {% endif %}
-        <h2 class="font-bold text-2xl">{{ post.data.title }}</h2>
-        <p class="text-primary-on-dark my-2">{{ post.data.description }}</p>
-        <p class="text-secondary-on-dark font-light text-sm my-2">
-          Last updated: {{post.date | postDate}}
+        <h2 class="font-bold text-2xl text-primary-on-dark">
+          {{ post.data.title }}
+        </h2>
+        <p class="text-secondary-on-dark text-sm font-normal my-4">
+          {{ post.data.description }}
         </p>
 
-        <ul class="flex items-center flex-wrap gap-4">
-          {%- for tech in post.data.techStack -%}
-          <li class="chip">
-            {{ tech.name }} {% if tech.version %}v{{tech.version}}{% endif %}
-          </li>
-          {%- endfor -%}
-        </ul>
+        <div
+          class="flex items-baseline justify-between gap-4 flex-wrap sm:flex-nowrap"
+        >
+          <ul class="flex-1 flex items-end flex-wrap gap-4">
+            {%- for tech in post.data.techStack -%}
+            <li class="chip">
+              {{ tech.name }} {% if tech.version %}v{{tech.version}}{% endif %}
+            </li>
+            {%- endfor -%}
+          </ul>
+
+          <p class="text-secondary-on-dark font-light text-sm">
+            Last updated: {{post.date | postDate}}
+          </p>
+        </div>
       </a>
     </li>
     {%- endfor -%}
