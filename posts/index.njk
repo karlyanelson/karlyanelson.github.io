@@ -6,10 +6,10 @@ eleventyImport:
 published: Sept 18, 2024
 ---
 
-<div>
+<div class="px-6 max-w-5xl mx-auto">
   <div class="mb-12">
     <h1 class="mb-2">Articles</h1>
-    <p class="text-secondary">
+    <p class="text-secondary-on-dark">
       How-to articles on various specific problems I've solved.
     </p>
   </div>
@@ -18,7 +18,7 @@ published: Sept 18, 2024
     {%- for post in collections.post | reverse -%}
     <li class="my-6">
       <a
-        class="block p-8 border border-solid rounded border-action fancy-hover bg-action-card-hover"
+        class="block p-8 border border-solid rounded border-action-on-dark fancy-hover bg-action-card-hover-on-dark"
         href="{{ post.url }}"
       >
         {% if post.data.draft %}
@@ -29,8 +29,8 @@ published: Sept 18, 2024
         </span>
         {% endif %}
         <h2 class="font-bold text-2xl">{{ post.data.title }}</h2>
-        <p class="text-primary my-2">{{ post.data.description }}</p>
-        <p class="text-secondary font-light text-sm my-2">
+        <p class="text-primary-on-dark my-2">{{ post.data.description }}</p>
+        <p class="text-secondary-on-dark font-light text-sm my-2">
           Last updated: {{post.date | postDate}}
         </p>
 

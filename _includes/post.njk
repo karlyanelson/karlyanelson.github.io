@@ -3,37 +3,42 @@ layout: default.njk
 ---
 
 <article>
-  {% if draft %}
-  <span
-    class="text-lg bg-orange-900 text-white font-bold px-2 py-1 rounded-full inline-block mb-2"
-  >
-    🚧 Under Construction
-  </span>
-  {% endif %}
-
-  <h1 class="mb-8">{{title}}</h1>
-
-  <p class="text-secondary text-sm">Last updated: {{page.date | postDate}}</p>
-
-  <ul class="flex items-center flex-wrap gap-4 mt-4 mb-6">
-    {% for tech in techStack %}
-    <li class="chip-action">
-      <a href="{{tech.url}}" target="_blank"
-        >{{tech.name}} {% if tech.version %}v{{tech.version}} {% endif %}</a
-      >
-    </li>
-    {% endfor %}
-  </ul>
-
-  <hr />
-  <details class="mt-8" open>
-    <summary class="mb-4">Table of Contents</summary>
-    <aside
-      class="border border-solid border-secondary px-4 py-6 rounded bg-slate-200 dark:bg-slate-900"
+  <div class="px-6 max-w-5xl mx-auto">
+    {% if draft %}
+    <span
+      class="text-lg bg-orange-900 text-white font-bold px-2 py-1 rounded-full inline-block mb-2"
     >
-      {{ content | toc | safe }}
-    </aside>
-  </details>
+      🚧 Under Construction
+    </span>
+    {% endif %}
 
-  <div class="mt-16 article-content">{{ content | safe }}</div>
+    <h1 class="mb-8">{{title}}</h1>
+
+    <p class="text-secondary-on-dark text-sm">
+      Last updated: {{page.date | postDate}}
+    </p>
+
+    <ul class="flex items-center flex-wrap gap-4 mt-4 mb-6">
+      {% for tech in techStack %}
+      <li class="chip-action">
+        <a href="{{tech.url}}" target="_blank"
+          >{{tech.name}} {% if tech.version %}v{{tech.version}} {% endif %}</a
+        >
+      </li>
+      {% endfor %}
+    </ul>
+
+    <hr />
+    <details class="mt-8" open>
+      <summary class="mb-4">Table of Contents</summary>
+      <aside
+        class="border border-solid border-secondary-on-light px-4 py-6 rounded bg-slate-200 dark:bg-slate-900"
+      >
+        {{ content | toc | safe }}
+      </aside>
+    </details>
+  </div>
+  <div class="mt-16 article-content pt-10 pb-40">
+    <div class="px-6 max-w-5xl mx-auto">{{ content | safe }}</div>
+  </div>
 </article>

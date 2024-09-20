@@ -13,7 +13,7 @@
     />
     {# See themes at https://unpkg.com/browse/prismjs@1.20.0/themes/ #}
     <link
-      href="https://unpkg.com/prismjs@1.20.0/themes/prism-dark.css"
+      href="https://unpkg.com/prismjs@1.20.0/themes/prism-coy.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/style.css?v={% version %}" />
@@ -28,12 +28,6 @@
     <meta name="theme-color" content="#ffffff" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-    {#
-    <link
-      href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap"
-      rel="stylesheet"
-    />
-    #}
     <link
       href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600;800&display=swap"
       rel="stylesheet"
@@ -60,18 +54,18 @@
     <header
       class="flex items-center justify-between flex-wrap gap-8 p-8 max-w-7xl mx-auto title-display text-2xl w-full"
     >
-      <a href="/" class="text-primary">Karly Nelson</a>
+      <a href="/" class="text-primary-on-dark">Karly Nelson</a>
       <nav class="flex items-center gap-8">
         <a href="/" {% if page.slug == "/" %} aria-current="page"{% endif %}>About Me</a>
         <a href="/posts" {% if page.slug == "/posts" %} aria-current="page" style="background:red"{% endif %}>Articles</a>
       </nav>
     </header>
-    <main class="px-6 max-w-5xl mx-auto mt-24">
+    <main class="mt-24 pb-6">
       {% block content %} {{ content | safe }} {% endblock %}
     </main>
 
     <footer
-      class="text-secondary flex items-center justify-between p-8 max-w-7xl mx-auto w-full mt-40"
+      class="text-secondary flex items-center justify-between p-8 max-w-7xl mx-auto w-full mt-6"
     >
       <p>&copy; 2024 Karly Nelson</p>
       <p>
