@@ -73,9 +73,17 @@
   }
 }
 
+.main-bg {
+  @apply bg-slate-900;
+}
+
+.fill-main-bg {
+  @apply fill-slate-900;
+}
+
 body {
   font-size: 1.125rem;
-  @apply bg-slate-800 text-primary-on-dark font-family-basic;
+  @apply main-bg text-primary-on-dark font-family-basic;
 }
 
 /* Headings */

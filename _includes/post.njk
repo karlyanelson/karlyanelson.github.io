@@ -41,7 +41,6 @@ layout: default.njk
 
   <svg
     viewBox="0 0 540 40"
-    fill="none"
     class="mt-24 w-full fill-article-bg relative -bottom-1"
   >
     <path
@@ -50,9 +49,20 @@ layout: default.njk
       d="M540 29V40L0 40L0 5C35.9883 1.28005 74.0208 0.00543976 111.431 1.52588e-05C111.564 -3.81469e-06 111.698 -3.81469e-06 111.831 1.52588e-05C140.298 0.00414085 168.399 0.88972 194.96 2.36324C257.44 5.82911 316.489 11.0877 375.504 16.3431C429.499 21.1515 483.464 25.5723 540 29Z"
     />
   </svg>
-  <div class="article-content pt-1 pb-40">
+  <div class="article-content pt-1">
     <div class="px-6 max-w-5xl mx-auto relative -top-11">
       {{ content | safe }}
     </div>
+
+    <svg
+      class="block mt-40 fill-main-bg w-full relative -bottom-1"
+      viewBox="0 0 1440 101"
+    >
+      <path
+        d="M1440,92.59v8.41H0v-28.54C22.09,43.93,65.96,19.23,124.38,7.39c105.81-21.49,181.23,7.89,256.34,37.15,14.7,5.73,29.38,11.45,44.28,16.78,97.25,34.71,213.71,46.47,329.88,27.04,46.87-7.87,91.25-18.61,135.63-29.35h0c40.56-9.81,81.12-19.63,123.61-27.26,138.63-24.85,292.78-11.19,393.88,41.82,11.49,6.02,22.16,12.38,32,19.02Z"
+        fill-rule="evenodd"
+        stroke-width="0"
+      />
+    </svg>
   </div>
 </article>
