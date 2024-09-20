@@ -3,7 +3,7 @@ layout: default.njk
 ---
 
 <article>
-  <div class="px-6 max-w-5xl mx-auto">
+  <div class="container">
     {% if draft %}
     <span
       class="text-lg bg-orange-900 text-white font-bold px-2 py-1 rounded-full inline-block mb-2"
@@ -50,9 +50,7 @@ layout: default.njk
     />
   </svg>
   <div class="article-content pt-1">
-    <div class="px-6 max-w-5xl mx-auto relative -top-11">
-      {{ content | safe }}
-    </div>
+    <div class="container relative -top-11">{{ content | safe }}</div>
   </div>
   <svg
     class="block fill-article-bg w-full relative -top-4"
