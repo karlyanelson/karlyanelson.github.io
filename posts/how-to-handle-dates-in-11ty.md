@@ -23,7 +23,7 @@ techStack:
 
 ## Solution Summary
 
-Use "Last Modified" for you date in your [frontmatter](https://www.11ty.dev/docs/data-frontmatter/).
+Use "Last Modified" as your date in your [frontmatter](https://www.11ty.dev/docs/data-frontmatter/).
 
 ```yaml
 date: Last Modified
