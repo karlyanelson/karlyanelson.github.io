@@ -70,6 +70,14 @@ module.exports = function (eleventyConfig) {
     });
   });
 
+  eleventyConfig.addFilter("postDateShort", (dateObj) => {
+    return dateObj.toLocaleString(undefined, {
+      year: "numeric",
+      month: "numeric",
+      day: "numeric",
+    });
+  });
+
   // //// Don't show drafts in production https://www.11ty.dev/docs/quicktips/draft-posts/
   // // When `eleventyExcludeFromCollections` is true, the file is not included in any collections
   // eleventyConfig.addGlobalData(

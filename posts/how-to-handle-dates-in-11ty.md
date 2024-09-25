@@ -1,8 +1,7 @@
 ---
-layout: post.njk
+lastUpdated: 2024-09-25
 tags: post
 title: How to handle dates in Eleventy (11ty)
-date: Last Modified
 description: Use the last modified date of post and format it nicely in Eleventy.
 techStack:
   - name: Eleventy (11ty)
@@ -23,7 +22,7 @@ techStack:
 
 ## Solution Summary
 
-Use "Last Modified" as your date in your [frontmatter](https://www.11ty.dev/docs/data-frontmatter/).
+Use ["Last Modified" or "git Last Modified"](https://www.11ty.dev/docs/dates/) as your `date` in your [frontmatter](https://www.11ty.dev/docs/data-frontmatter/).
 
 ```yaml
 date: Last Modified
@@ -55,15 +54,17 @@ eleventyConfig.addFilter("postDate", (dateObj) => {
 
 ### Use last modified date
 
-How to exactly to use "Last Modified" date.
+The simplest way to show the last modified date of a post (or item in any collection) without having to remember to edit it manually every time is by setting ["Last Modified"](https://www.11ty.dev/docs/dates/) as your `date` in the [frontmatter](https://www.11ty.dev/docs/data-frontmatter/) of the post.
+
+> Note: [See 11ty dates docs](https://www.11ty.dev/docs/dates/) for other date options like `git Last Modified`. Whereas `Last Modified` "automatically resolves to the file’s last modified date", `git Last Modified` "automatically resolves to the file’s latest git commit." This is a bit more resource intensive though, so you might want to use a [`posts.11tydata.js` solution](https://github.com/11ty/11ty-website/blob/5403f2b853e09165bec8bc6f7466a6a041487bcc/src/docs/docs.11tydata.js#L5-L7). I think the main difference is `Last Modified` might count a file as modified if its layout was modified. Not 100% sure about that though. Generally though, the `git` one seems a bit more accurate.
 
 #### Update frontmatter
 
-In your 11ty collection item, update the `date` in your frontmatter. For example, the frontmatter of this post (posts/how-to-handle-dates-in-11ty.md) is:
+In your 11ty collection item, update the `date` in your frontmatter. For example, the frontmatter of this post (posts/how-to-handle-dates-in-11ty.md) would be:
 
 ```yaml
 ---
-layout: post.njk
+layout: layouts/post.njk
 tags: post
 title: How to handle dates in 11ty
 date: Last Modified

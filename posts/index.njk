@@ -1,5 +1,5 @@
 ---
-layout: default.njk
+layout: layouts/default.njk
 title: Articles
 eleventyImport:
   collections: ["post"]
@@ -47,7 +47,8 @@ description: How-to articles on various specific problems I've solved.
           </ul>
 
           <p class="text-secondary-on-dark font-light text-sm">
-            Last updated: {{post.date | postDate}}
+            Published: {{post.date | postDateShort}} • Updated:
+            {{post.data.lastUpdated | postDateShort}}
           </p>
         </div>
       </a>

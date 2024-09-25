@@ -1,5 +1,5 @@
 ---
-layout: default.njk
+layout: layouts/default.njk
 ---
 
 <article>
@@ -15,7 +15,7 @@ layout: default.njk
     <h1 class="mb-8">{{title}}</h1>
 
     <p class="text-secondary-on-dark text-sm">
-      Last updated: {{page.date | postDate}}
+      Published: {{page.date | postDate}} • Updated: {{lastUpdated | postDate}}
     </p>
 
     <ul class="flex items-center flex-wrap gap-4 mt-4 mb-6">

@@ -1,9 +1,8 @@
 ---
-layout: post.njk
+lastUpdated: 2024-09-19
 tags: post
 title: How to escape code in Markdown in Eleventy (11ty)
 description: Be able to show Liquid code in Markdown in Eleventy without it compiling
-date: Last Modified
 techStack:
   - name: Eleventy (11ty)
     version: 2.0

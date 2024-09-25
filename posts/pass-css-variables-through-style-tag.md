@@ -1,8 +1,7 @@
 ---
-layout: post.njk
+lastUpdated: 2024-09-19
 tags: post
 title: Pass in CSS Variables through a <style> tag
-date: Last Modified
 description: Be able to pass in CSS variable values through a inline style tag on an element. Useful for Squarespace code blocks.
 techStack:
   - name: CSS
