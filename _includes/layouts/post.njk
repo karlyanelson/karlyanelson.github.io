@@ -15,7 +15,8 @@ layout: layouts/default.njk
     <h1 class="mb-8">{{title}}</h1>
 
     <p class="text-secondary-on-dark text-sm">
-      Published: {{page.date | postDate}} • Updated: {{lastUpdated | postDate}}
+      Published: {{page.date | postDate}}{% if lastUpdated%} • Updated:
+      {{lastUpdated | postDate}}{% endif %}
     </p>
 
     <ul class="flex items-center flex-wrap gap-4 mt-4 mb-6">

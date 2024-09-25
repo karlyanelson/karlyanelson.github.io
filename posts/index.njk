@@ -47,8 +47,9 @@ description: How-to articles on various specific problems I've solved.
           </ul>
 
           <p class="text-secondary-on-dark font-light text-sm">
-            Published: {{post.date | postDateShort}} • Updated:
-            {{post.data.lastUpdated | postDateShort}}
+            Published: {{post.date | postDateShort}}{% if
+            post.data.lastUpdated%} • Updated: {{post.data.lastUpdated |
+            postDate}}{% endif %}
           </p>
         </div>
       </a>

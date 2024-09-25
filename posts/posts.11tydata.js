@@ -1,9 +1,6 @@
 let data = {
   layout: "layouts/post.njk",
+  date: "git Created",
 };
-
-if (process.env.NODE_ENV === "production") {
-  data.date = "git Created";
-}
 
 module.exports = data;
