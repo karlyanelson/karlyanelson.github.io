@@ -7,34 +7,61 @@ description: How-to articles on various specific problems I've solved.
 ---
 
 <div class="container">
-  <div class="mb-12">
-    <h1 class="mb-2">Articles</h1>
-    <p class="text-secondary-on-dark">
-      How-to articles on various specific problems I've solved.
-    </p>
-  </div>
-
-  <ul>
-    {%- for post in collections.post | reverse -%}
-    <li class="mb-10">
-      {% if post.data.draft %}
-      <span
-        class="text-xs bg-orange-900 text-white font-bold px-2 py-1 rounded-full inline-block mb-2"
-      >
-        🚧 Under Construction
-      </span>
-      {% endif %}
-      <h2 class="text-2xl">
-        <a href="{{ post.url }}">{{ post.data.title }}</a>
-      </h2>
-      <p class="text-secondary-on-dark font-light text-sm my-1">
-        {{post.date | postDateShort}} {% for tech in post.data.techStack %}
-        <span class="mx-2"> | </span>
-        <span> {{tech.name}} </span>
-        {% endfor %}
-      </p>
-      <p class="text-sm text-secondary-on-dark">{{ post.data.description }}</p>
-    </li>
-    {%- endfor -%}
-  </ul>
+  <h1 class="mb-2">Articles</h1>
+  <p class="text-secondary-on-dark">
+    How-to articles on various specific problems I've solved.
+  </p>
 </div>
+
+<svg
+  viewBox="0 0 540 40"
+  class="mt-6 w-full fill-article-bg relative -bottom-1"
+>
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M540 8.50001V40H0V24C40 18 63.5 9.62001 133.5 8.50001C203.5 7.38 287 24 382.5 24C478 24 475 13 540 8.50001Z"
+  />
+</svg>
+
+<div class="article-bg relative z-2 pt-4 pb-10">
+  <div class="container">
+    <ul>
+      {%- for post in collections.post | reverse -%}
+      <li class="mb-10">
+        {% if post.data.draft %}
+        <span
+          class="text-xs bg-orange-900 text-white font-bold px-2 py-1 rounded-full inline-block mb-2"
+        >
+          🚧 Under Construction
+        </span>
+        {% endif %}
+        <h2 class="text-2xl">
+          <a
+            class="text-action-on-light fancy-hover-on-light"
+            href="{{ post.url }}"
+            >{{ post.data.title }}</a
+          >
+        </h2>
+        <p class="text-secondary-on-light font-light text-sm my-1">
+          {{post.date | postDateShort}} {% for tech in post.data.techStack %}
+          <span class="mx-2"> | </span>
+          <span> {{tech.name}} </span>
+          {% endfor %}
+        </p>
+        <p class="text-sm text-primary-on-light">{{ post.data.description }}</p>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</div>
+
+<svg
+  class="block fill-article-bg w-full relative z-0 -top-10"
+  viewBox="0 0 1067 192"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M0 0H1067V123C1067 123 974.762 101.222 887 100C752.185 98.1233 638.744 139.752 504 135C381.909 130.694 297.08 81.3857 175 86C96.6296 88.9622 0 123 0 123V0Z"
+  />
+</svg>
