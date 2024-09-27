@@ -13,16 +13,7 @@ description: How-to articles on various specific problems I've solved.
   </p>
 </div>
 
-<svg
-  viewBox="0 0 540 40"
-  class="mt-6 w-full fill-article-bg relative -bottom-1"
->
-  <path
-    fill-rule="evenodd"
-    clip-rule="evenodd"
-    d="M540 8.50001V40H0V24C40 18 63.5 9.62001 133.5 8.50001C203.5 7.38 287 24 382.5 24C478 24 475 13 540 8.50001Z"
-  />
-</svg>
+<div class="mt-6 relative -bottom-1">{% include "svgs/top-curve.njk" %}</div>
 
 <div class="article-bg relative z-2 pt-4 pb-10">
   <div class="container">
@@ -30,11 +21,7 @@ description: How-to articles on various specific problems I've solved.
       {%- for post in collections.post | reverse -%}
       <li class="mb-10">
         {% if post.data.draft %}
-        <span
-          class="text-xs bg-orange-900 text-white font-bold px-2 py-1 rounded-full inline-block mb-2"
-        >
-          🚧 Under Construction
-        </span>
+        <div class="text-xs">{% include "under-construction.njk" %}</div>
         {% endif %}
         <h2 class="text-2xl">
           <a

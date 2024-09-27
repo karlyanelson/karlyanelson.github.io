@@ -1,4 +1,5 @@
 ---
+draft: true
 lastUpdated: 2024-09-25
 tags: post
 title: How to handle dates in Eleventy (11ty)
@@ -136,7 +137,7 @@ In `_includes/post.njk`:
 
 If we use `toLocaleString()` our date `Thu Sep 19 2024 08:38:16 GMT-0500 (Central Daylight Time)` will become `9/19/2024, 9:40:51 AM`.
 
-You can pass options to [toLocalString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString) to change how you want it formatted - like if you want it to show the time or not.
+You can pass options to [toLocaleString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString) to change how you want it formatted - like if you want it to show the time or not.
 
 #### Example toLocalString formatting
 

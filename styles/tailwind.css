@@ -70,6 +70,10 @@
     @apply fill-sky-950;
   }
 
+  .fill-action-on-dark {
+    @apply fill-sky-300;
+  }
+
   .font-family-basic {
     font-family: "Karla", Helvetica, Arial, sans-serif;
   }
@@ -162,6 +166,24 @@ a {
   width: 100%;
 }
 
+img {
+  @apply max-w-full w-full h-auto;
+}
+
+.img-link {
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.img-link:hover img {
+  @apply opacity-75;
+}
+
+.img-link:hover::after {
+  display: none;
+}
+
 /* Code blocks */
 
 code[class*="language-"],
@@ -193,7 +215,7 @@ code:not([class*="language-"]) {
 /* Chips */
 
 ._chip-base {
-  @apply inline-block border border-solid text-sm px-2 py-1 rounded-lg;
+  @apply inline-block border border-solid text-sm px-2 py-1 rounded;
 }
 
 .chip {
@@ -299,4 +321,23 @@ body {
   --pagefind-ui-background: rgba(0, 0, 0, 0.25);
   --pagefind-ui-border: white;
   --pagefind-ui-tag: #152028;
+}
+
+/* Accessibility */
+
+/**
+ * Visually hide an element, but leave it available for screen readers
+ * @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
+ * @link http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ * @link https://github.com/h5bp/main.css/issues/12#issuecomment-321106995
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }

@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title> {{title}} - Karly Nelson</title>
+    <title>{{title}} - Karly Nelson</title>
     <meta charset="UTF-8" />
     {% if description %}
-    <meta name="description" content="{{description}} {% if techStack %}{%- for tech in techStack -%} | {{ tech.name }}{% if tech.version %}v{{tech.version}} {% endif %}{%- endfor -%}{% endif %}" />
+    <meta
+      name="description"
+      content="{{description}} {% if techStack %}{%- for tech in techStack -%} | {{ tech.name }}{% if tech.version %}v{{tech.version}} {% endif %}{%- endfor -%}{% endif %}"
+    />
     {% endif %}
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1"
-    />
-    {# Syntax highlighting - See themes at https://unpkg.com/browse/prismjs@1.20.0/themes/ #}
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {# Syntax highlighting - See themes at
+    https://unpkg.com/browse/prismjs@1.20.0/themes/ #}
     <link
       href="https://unpkg.com/prismjs@1.20.0/themes/prism-tomorrow.css"
       rel="stylesheet"
     />
     {# Search #}
-    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
     {# My Styles #}
     <link rel="stylesheet" href="/style.css?v={% version %}" />
     <!-- favicons -->
@@ -62,21 +63,46 @@
     >
       <a href="/" class="text-primary-on-dark font-extrabold">Karly Nelson</a>
       <nav class="flex items-center justify-center flex-wrap gap-1">
-        <a href="/" {% if page.url == '/' %}aria-current="page"{% endif %}>About Me</a>
-        <a href="/posts" {% if '/posts' in page.url %}aria-current="page"{% endif %}>Articles</a>
-        <a href="/search"{% if '/search' in page.url %}aria-current="page"{% endif %}>Search</a>
+        <a href="/" {% if page.url == '/' %} aria-current="page" {% endif %}>About Me</a>
+        <a href="/posts" {% if '/posts' in page.url %} aria-current="page" {% endif %}>Articles</a>
+        <a href="/search"{% if '/search' in page.url %} aria-current="page" {% endif %}>Search</a>
       </nav>
     </header>
     <main class="mt-10 sm:mt-24 pb-6">
       {% block content %} {{ content | safe }} {% endblock %}
     </main>
-    <footer
-      class="text-secondary md:flex items-center justify-between p-8 max-w-7xl mx-auto w-full"
-    >
-      <p class="text-center mb-4 md:mb-0 md:text-left flex-none">&copy; 2024 Karly Nelson</p>
-      <p class="text-center md:text-right">
+    <footer class="text-secondary p-8 max-w-7xl mx-auto w-full text-sm">
+      <div class="flex items-center justify-between">
+        <p class="text-left flex-none">
+          &copy; 2024 Karly Nelson
+        </p>
+        <div class="flex items-center gap-4">
+        <a
+          href="https://github.com/karlynelson"
+          class="text-center md:text-right img-link"
+        >
+          <img src="/images/github-mark-white.svg" />
+          <span class="visually-hidden">GitHub</span>
+        </a>
+        <a
+          href="https://dribbble.com/KarlyANelson"
+          class="text-center md:text-right img-link"
+        >
+          <img src="/images/dribbble-icon-light.svg" />
+          <span class="visually-hidden">Dribbble</span>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/karlynelson"
+          class="text-center md:text-right img-link"
+        >
+          <img src="/images/linkedin-white.svg" />
+          <span class="visually-hidden">LinkedIn</span>
+        </a>
+        </div>
+      </div>
+      <p class="text-center mt-4">
         Colophon: Built with <a href="https://www.11ty.dev/">Eleventy</a>,
-        <a href="https://tailwindcss.com/">Tailwind CSS</a>,
+        <a href="https://tailwindcss.com/">Tailwind</a>,
         <a href="https://alpinejs.dev/">AlpineJS</a>,
         <a href="https://prismjs.com/">PrismJS</a>, and
         <a href="https://www.netlify.com/">Netlify</a>
@@ -84,10 +110,10 @@
     </footer>
   </body>
 
-{# Search - PageFind #}
+  {# Search - PageFind #}
   <script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-        new PagefindUI({ element: "#search", showSubResults: true });
-    });
-</script>
+    window.addEventListener("DOMContentLoaded", (event) => {
+      new PagefindUI({ element: "#search", showSubResults: true })
+    })
+  </script>
 </html>

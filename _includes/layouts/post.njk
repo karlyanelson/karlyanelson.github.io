@@ -5,11 +5,7 @@ layout: layouts/default.njk
 <article>
   <div class="container">
     {% if draft %}
-    <span
-      class="text-lg bg-orange-900 text-white font-bold px-2 py-1 rounded-full inline-block mb-2"
-    >
-      🚧 Under Construction
-    </span>
+    <div class="text-lg">{% include "under-construction.njk" %}</div>
     {% endif %}
 
     <h1 class="mb-8">{{title}}</h1>
@@ -21,10 +17,10 @@ layout: layouts/default.njk
 
     <ul class="flex items-center flex-wrap gap-4 mt-4 mb-6">
       {% for tech in techStack %}
-      <li class="chip-action">
-        <a href="{{tech.url}}" target="_blank"
-          >{{tech.name}} {% if tech.version %}v{{tech.version}} {% endif %}</a
-        >
+      <li>
+        <a href="{{tech.url}}" target="_blank" class="chip-action">
+          {{tech.name}} {% if tech.version %}v{{tech.version}} {% endif %}
+        </a>
       </li>
       {% endfor %}
     </ul>
@@ -40,17 +36,7 @@ layout: layouts/default.njk
     </details>
   </div>
 
-  <svg
-    viewBox="0 0 540 40"
-    class="mt-24 w-full fill-article-bg relative -bottom-1"
-  >
-    <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
-      d="M540 8.50001V40H0V24C40 18 63.5 9.62001 133.5 8.50001C203.5 7.38 287 24 382.5 24C478 24 475 13 540 8.50001Z"
-    />
-  </svg>
-
+  <div class="mt-24 relative -bottom-1">{% include "svgs/top-curve.njk" %}</div>
   <div class="article-content pt-1">
     <div class="container relative -top-11">{{ content | safe }}</div>
   </div>
