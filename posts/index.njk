@@ -15,7 +15,7 @@ description: How-to articles on various specific problems I've solved.
 
 <div class="mt-6 relative -bottom-1">{% include "svgs/top-curve.njk" %}</div>
 
-<div class="article-bg relative z-2 pt-4 pb-10">
+<div class="article-bg relative z-2 pt-6 pb-16">
   <div class="container">
     <ul>
       {%- for post in collections.post | reverse -%}
@@ -43,12 +43,4 @@ description: How-to articles on various specific problems I've solved.
   </div>
 </div>
 
-<svg
-  class="block fill-article-bg w-full relative z-0 -top-10"
-  viewBox="0 0 1067 192"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    d="M0 0H1067V123C1067 123 974.762 101.222 887 100C752.185 98.1233 638.744 139.752 504 135C381.909 130.694 297.08 81.3857 175 86C96.6296 88.9622 0 123 0 123V0Z"
-  />
-</svg>
+<div class="relative z-0 -top-1">{% include "svgs/bottom-curve.njk" %}</div>

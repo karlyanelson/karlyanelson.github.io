@@ -1,5 +1,4 @@
 ---
-draft: true
 lastUpdated: 2024-09-25
 tags: post
 title: How to handle dates in Eleventy (11ty)

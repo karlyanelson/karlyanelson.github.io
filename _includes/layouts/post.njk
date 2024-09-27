@@ -37,16 +37,8 @@ layout: layouts/default.njk
   </div>
 
   <div class="mt-24 relative -bottom-1">{% include "svgs/top-curve.njk" %}</div>
-  <div class="article-content pt-1">
+  <div class="article-content pt-1 pb-8">
     <div class="container relative -top-11">{{ content | safe }}</div>
   </div>
-  <svg
-    class="block fill-article-bg w-full relative -top-4"
-    viewBox="0 0 1067 192"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M0 0H1067V123C1067 123 974.762 101.222 887 100C752.185 98.1233 638.744 139.752 504 135C381.909 130.694 297.08 81.3857 175 86C96.6296 88.9622 0 123 0 123V0Z"
-    />
-  </svg>
+  <div class="relative -top-1 z-0">{% include "svgs/bottom-curve.njk" %}</div>
 </article>

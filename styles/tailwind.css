@@ -20,7 +20,7 @@
   }
 
   .text-action-on-light {
-    @apply text-blue-600;
+    @apply text-blue-700;
   }
 
   .text-action-on-dark {
@@ -28,7 +28,7 @@
   }
 
   .bg-action-on-light {
-    @apply bg-blue-600;
+    @apply bg-blue-700;
   }
 
   .bg-action-on-dark {
@@ -44,7 +44,7 @@
   }
 
   .border-action-on-light {
-    @apply border-blue-600;
+    @apply border-blue-700;
   }
 
   .border-primary-on-light {
