@@ -16,43 +16,24 @@ description: How-to articles on various specific problems I've solved.
 
   <ul>
     {%- for post in collections.post | reverse -%}
-    <li class="my-6">
-      <a
-        class="shadow-lg hover:shadow-2xl block p-6 border border-solid rounded border-slate-950 hover:border-action-on-dark bg-black bg-opacity-25 fancy-hover bg-action-card-hover-on-dark"
-        href="{{ post.url }}"
+    <li class="mb-10">
+      {% if post.data.draft %}
+      <span
+        class="text-xs bg-orange-900 text-white font-bold px-2 py-1 rounded-full inline-block mb-2"
       >
-        {% if post.data.draft %}
-        <span
-          class="text-xs bg-orange-900 text-white font-bold px-2 py-1 rounded-full inline-block mb-2"
-        >
-          🚧 Under Construction
-        </span>
-        {% endif %}
-        <h2 class="font-bold text-2xl text-primary-on-dark">
-          {{ post.data.title }}
-        </h2>
-        <p class="text-secondary-on-dark text-sm font-normal my-4">
-          {{ post.data.description }}
-        </p>
-
-        <div
-          class="flex items-baseline justify-between gap-4 flex-wrap sm:flex-nowrap"
-        >
-          <ul class="flex-1 flex items-end flex-wrap gap-4">
-            {%- for tech in post.data.techStack -%}
-            <li class="chip">
-              {{ tech.name }} {% if tech.version %}v{{tech.version}}{% endif %}
-            </li>
-            {%- endfor -%}
-          </ul>
-
-          <p class="text-secondary-on-dark font-light text-sm">
-            Published: {{post.date | postDateShort}}{% if
-            post.data.lastUpdated%} • Updated: {{post.data.lastUpdated |
-            postDateShort}}{% endif %}
-          </p>
-        </div>
-      </a>
+        🚧 Under Construction
+      </span>
+      {% endif %}
+      <h2 class="text-2xl">
+        <a href="{{ post.url }}">{{ post.data.title }}</a>
+      </h2>
+      <p class="text-secondary-on-dark font-light text-sm my-1">
+        {{post.date | postDateShort}} {% for tech in post.data.techStack %}
+        <span class="mx-2"> | </span>
+        <span> {{tech.name}} </span>
+        {% endfor %}
+      </p>
+      <p class="text-sm text-secondary-on-dark">{{ post.data.description }}</p>
     </li>
     {%- endfor -%}
   </ul>
