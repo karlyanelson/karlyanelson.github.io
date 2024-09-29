@@ -8,14 +8,14 @@ description: How-to articles on various specific problems I've solved.
 
 <div class="container">
   <h1 class="mb-2">Articles</h1>
-  <p class="text-secondary-on-dark">
+  <p class="text-secondary">
     How-to articles on various specific problems I've solved.
   </p>
 </div>
 
 <div class="mt-6 relative -bottom-1">{% include "svgs/top-curve.njk" %}</div>
 
-<div class="article-bg relative z-2 pt-6 pb-16">
+<div class="bg-is-light is-on-light relative z-2 pt-6 pb-16">
   <div class="container">
     <ul>
       {%- for post in collections.post | reverse -%}
@@ -24,19 +24,17 @@ description: How-to articles on various specific problems I've solved.
         <div class="text-xs">{% include "under-construction.njk" %}</div>
         {% endif %}
         <h2 class="text-2xl">
-          <a
-            class="text-action-on-light fancy-hover-on-light"
-            href="{{ post.url }}"
+          <a class="text-action fancy-hover" href="{{ post.url }}"
             >{{ post.data.title }}</a
           >
         </h2>
-        <p class="text-secondary-on-light font-light text-sm my-1">
+        <p class="text-secondary font-light text-sm my-1">
           {{post.date | postDateShort}} {% for tech in post.data.techStack %}
           <span class="mx-2"> | </span>
           <span> {{tech.name}} </span>
           {% endfor %}
         </p>
-        <p class="text-sm text-primary-on-light">{{ post.data.description }}</p>
+        <p class="text-sm text-primary">{{ post.data.description }}</p>
       </li>
       {%- endfor -%}
     </ul>
