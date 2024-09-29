@@ -3,16 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --color-opacity: 1;
-
   --text-primary-on-light: #1e293b /* slate-800 */;
   --text-primary-on-dark: #f1f5f9 /* slate-100 */;
   --text-secondary-on-light: #475569 /* slate-600 */;
   --text-secondary-on-dark: #cbd5e1 /* slate-300 */;
-  --action-on-light: rgb(29 78 216 / var(--color-opacity))
-    /* #1d4ed8 blue-700 */;
-  --action-on-dark: rgb(125 211 252 / var(--color-opacity))
-    /* #7dd3fc sky-300 */;
+  --action-on-light: #1d4ed8 /*  blue-700 */;
+  --action-on-dark: #7dd3fc /* sky-300 */;
 
   --bg-dark: #082f49 /* big-sky-950 */;
   --bg-light: var(--text-secondary-on-dark);
@@ -80,7 +76,7 @@ body {
 
   .bg-main {
     background-color: var(--bg-dark);
-    @apply bg-gradient-to-tl from-sky-950  to-blue-950;
+    @apply bg-gradient-to-tl from-sky-900  to-blue-950;
   }
 
   .font-family-basic {
@@ -89,7 +85,6 @@ body {
 
   .title-display {
     @apply font-family-basic
-    /* font-family: "Satisfy", "Tiny5", "Courier New", Courier, monospace; */
     /* font-family: "Tiny5", "Courier New", Courier, monospace; */;
   }
 }
@@ -222,8 +217,7 @@ code:not([class*="language-"]) {
 }
 
 .chip-action:hover {
-  --color-opacity: 0.15;
-  background-color: var(--action);
+  @apply bg-gradient-to-tl from-sky-800  to-blue-900;
 }
 
 /* Articles */
