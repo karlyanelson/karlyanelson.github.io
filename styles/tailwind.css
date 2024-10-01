@@ -159,11 +159,11 @@ img {
 }
 
 .fancy-hover::after {
-  @apply _fancy-hover-base bg-action;
+  @apply _fancy-hover-base bg-action bg-gradient-to-r from-sky-300  to-blue-500;
 }
 
 .is-on-light .fancy-hover::after {
-  @apply _fancy-hover-base bg-action;
+  @apply _fancy-hover-base bg-action bg-gradient-to-r from-sky-500  to-blue-700;
 }
 
 .fancy-hover:hover::after,
