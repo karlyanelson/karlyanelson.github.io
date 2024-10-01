@@ -58,20 +58,21 @@ exports.handler = myFunc;
 
 > **Note:** When using `setDimensions` or `putDimensions` - [WARNING](https://github.com/awslabs/aws-embedded-metrics-node#metriclogger): Every distinct value will result in a new CloudWatch Metric. If the cardinality of a particular value is expected to be high, you should consider using setProperty instead.
 
-## Extra Credit: Post Metrics inside an ECS Task
+## Extra Credit: Post Metrics inside an ECS Task container
 
-This works out of the box for Lambda - they run Cloudwatch Agent on your behalf. However, if you want to use `aws-embedded-metrics-node` in an ECS task container to send embedded metrics format (EMF) logs to Cloudwatch as metrics, you need to add an [AWS Cloudwatch Agent](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Install-CloudWatch-Agent.html) container as a sidecar in the same ECS task.
+This works out of the box for Lambda - they run Cloudwatch Agent on your behalf. However, if you want to use `aws-embedded-metrics-node` in an ECS task container to send embedded metrics format (EMF) logs to Cloudwatch as metrics, you need to add an [AWS Cloudwatch Agent](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Embedded_Metric_Format_Generation_CloudWatch_Agent.html) container as a sidecar in the same ECS task.
 
 ### Details
 
-1. Grab Cloudwatch Agent image for your sidecar container from here: https://gallery.ecr.aws/cloudwatch-agent/cloudwatch-agent
+1. Grab the Cloudwatch Agent image for your sidecar container from here: https://gallery.ecr.aws/cloudwatch-agent/cloudwatch-agent
 2. Add port `25888` to your Cloudwatch Agent sidecar container - it's the default.
-3. Create a `aws_iam_policy` with the name `CloudWatchAgentServerPolicy` and add its arn to your ECS Task `resource "aws_iam_role_policy_attachment" "task_execution"`
-4. Add `CW_CONFIG_CONTENT` environment variable with value of `{"logs" : {"metrics_collected" : {"emf" : {}}}}`
+3. Create a `aws_iam_policy` with the name `CloudWatchAgentServerPolicy` and add its arn to your ECS Task `resource "aws_iam_role_policy_attachment" "task_execution"` and `resource "aws_iam_role_policy_attachment" "task"`
+4. Add `CW_CONFIG_CONTENT` environment variable with value of `{"logs" : {"metrics_collected" : {"emf" : {}}}}` to your sidecar container
+5. Add `AWS_EMF_LOG_GROUP_NAME` environment variable with a value of the sidecar log group name to your application container.
 
 ### ECS Task Container defintions example
 
-Here is an example of how to put your application container and Cloudwatch Agent sidecar container in the same ECS task definition:
+Here is a [Terraform](https://registry.terraform.io/providers/hashicorp/aws/latest/docs) example of how to put your application container and Cloudwatch Agent sidecar container in the same ECS task definition:
 
 ```tf
 resource "aws_ecs_task_definition" "main" {
@@ -113,7 +114,7 @@ resource "aws_ecs_task_definition" "main" {
       },
       {
         name      = "myapplication",
-        image     = task_image.url,
+        image     = local.task_image_url,
         cpu       = 256,
         memory    = 512,
         essential = true,
