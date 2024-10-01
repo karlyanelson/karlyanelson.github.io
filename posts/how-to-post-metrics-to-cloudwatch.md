@@ -76,7 +76,7 @@ Here is a [Terraform](https://registry.terraform.io/providers/hashicorp/aws/late
 
 ```tf
 resource "aws_ecs_task_definition" "main" {
-  family                   = "taskfamily"
+  family                   = "mycooltaskfamily"
   requires_compatibilities = ["FARGATE"]
   execution_role_arn       = local.task_execution_role_arn
   task_role_arn            = local.task_role_arn
@@ -113,7 +113,7 @@ resource "aws_ecs_task_definition" "main" {
         ]
       },
       {
-        name      = "myapplication",
+        name      = "mycoolapplication",
         image     = local.task_image_url,
         cpu       = 256,
         memory    = 512,

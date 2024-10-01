@@ -1,44 +1,29 @@
 ---
-layout: layouts/default.njk
+layout: layouts/page.njk
 title: Articles
+description: How-to articles on various specific problems I've solved.
 eleventyImport:
   collections: ["post"]
-description: How-to articles on various specific problems I've solved.
 ---
 
-<div class="container">
-  <h1 class="mb-2">Articles</h1>
-  <p class="text-secondary">
-    How-to articles on various specific problems I've solved.
-  </p>
-</div>
-
-<div class="mt-6 relative -bottom-1">{% include "svgs/top-curve.njk" %}</div>
-
-<div class="bg-is-light is-on-light relative z-2 pt-6 pb-16">
-  <div class="container">
-    <ul>
-      {%- for post in collections.post | reverse -%}
-      <li class="mb-10">
-        {% if post.data.draft %}
-        <div class="text-xs">{% include "under-construction.njk" %}</div>
-        {% endif %}
-        <h2 class="text-2xl">
-          <a class="text-action fancy-hover" href="{{ post.url }}"
-            >{{ post.data.title }}</a
-          >
-        </h2>
-        <p class="text-secondary font-light text-sm my-1">
-          {{post.date | postDateShort}} {% for tech in post.data.techStack %}
-          <span class="mx-2"> | </span>
-          <span> {{tech.name}} </span>
-          {% endfor %}
-        </p>
-        <p class="text-sm text-primary">{{ post.data.description }}</p>
-      </li>
-      {%- endfor -%}
-    </ul>
-  </div>
-</div>
-
-<div class="relative z-0 -top-1">{% include "svgs/bottom-curve.njk" %}</div>
+<ul>
+  {%- for post in collections.post | reverse -%}
+  <li class="mb-10">
+    {% if post.data.draft %}
+    <div class="text-xs">{% include "under-construction.njk" %}</div>
+    {% endif %}
+    <h2 class="text-2xl">
+      <a class="text-action fancy-hover" href="{{ post.url }}"
+        >{{ post.data.title }}</a
+      >
+    </h2>
+    <p class="text-secondary font-light text-sm my-1">
+      {{post.date | postDateShort}} {% for tech in post.data.techStack %}
+      <span class="mx-2"> | </span>
+      <span> {{tech.name}} </span>
+      {% endfor %}
+    </p>
+    <p class="text-sm text-primary">{{ post.data.description }}</p>
+  </li>
+  {%- endfor -%}
+</ul>

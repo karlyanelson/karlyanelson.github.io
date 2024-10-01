@@ -1,0 +1,18 @@
+---
+layout: layouts/default.njk
+---
+
+<div class="container">
+  <h1 class="mb-2">{{title}}</h1>
+  <p class="text-secondary">{{description}}</p>
+</div>
+
+<div class="mt-6 relative -bottom-1">{% include "svgs/top-curve.njk" %}</div>
+
+<div
+  class="article-content bg-is-light is-on-light relative z-2 pt-6 pb-16 text-primary"
+>
+  <div class="container">{{content | safe}}</div>
+</div>
+
+<div class="relative z-0 -top-1">{% include "svgs/bottom-curve.njk" %}</div>

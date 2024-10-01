@@ -1,10 +1,8 @@
 ---
-layout: layouts/default.njk
+layout: layouts/page.njk
 title: Resume
 description: Hi! I'm Karly. I'm a Senior Software Engineer and UX Designer at Ledger Works in St. Louis. Here's my resume and work experience.
 ---
-
-# Resume
 
 ## Education
 
