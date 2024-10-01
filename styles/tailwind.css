@@ -100,11 +100,11 @@ h2 {
 }
 
 h3 {
-  @apply text-4xl font-bold;
+  @apply text-3xl font-bold;
 }
 
 h4 {
-  @apply text-3xl font-bold;
+  @apply text-2xl font-bold;
 }
 
 /* Nav */
@@ -123,7 +123,6 @@ a {
   @apply text-action fancy-hover;
   text-decoration: none;
   font-weight: 600;
-  display: inline-block;
   position: relative;
 }
 
@@ -268,7 +267,10 @@ code:not([class*="language-"]) {
 /* Table of Contents */
 
 .toc ol {
-  list-style-type: disc;
+  @apply list-disc list-inside;
+}
+
+.toc ol ol {
   padding-inline-start: 2rem;
 }
 
@@ -278,6 +280,39 @@ code:not([class*="language-"]) {
 
 .toc a {
   @apply fancy-hover;
+}
+
+/* Resume */
+
+.resume-content h2 {
+  @apply flex items-center gap-4 mt-24 mb-10;
+}
+
+.resume-content ul ul {
+  @apply flex gap-x-6 gap-y-1 flex-wrap mb-1;
+}
+
+.resume-content ul ul li {
+  @apply mr-2;
+}
+
+.resume-gradient {
+  @apply bg-gradient-to-tl from-sky-800  to-blue-900;
+}
+
+.resume-content h2::after,
+.resume-content h2::before {
+  @apply resume-gradient rounded-full;
+  content: "";
+  flex: 1;
+  background-color: var(--action);
+  height: 0.5rem;
+  width: 100%;
+  opacity: 0.5;
+}
+
+.resume-content h2:first-of-type {
+  @apply mt-0;
 }
 
 /* Media Queries */

@@ -1,10 +1,13 @@
 ---
 layout: layouts/page.njk
 title: Resume
-description: Hi! I'm Karly. I'm a Senior Software Engineer and UX Designer at Ledger Works in St. Louis. Here's my resume and work experience.
+description: I'm currently a Senior Software Engineer and UX Designer at Ledger Works in St. Louis
+isResume: true
+articleStyles: true
+showTOC: true
 ---
 
-## Education
+## 🎓 Education
 
 ### Washington University in St. Louis
 
@@ -16,7 +19,7 @@ Second Major in Anthropology
 
 Study Abroad • Spring 2012 • Florence, Italy
 
-## Job History
+## 💼 Job History
 
 ### Ledger Works • Senior Software Engineer
 
@@ -60,73 +63,93 @@ Created promotional materials for various Washington University programs. Create
 _June – August 2013 • Tianjin, China_
 Collaborated with a small marketing team as part of a leadership development consulting firm. Concepted and developed marketing materials for international schools, assisted marketing director with supplemental work, and managed the design of an international prayer calendar.
 
-## Skills
+## ⚔️ Skills
 
-- Design Programs
-  - Figma
-  - Adobe Creative Suite (Illustrator, Photoshop, InDesign)
-  - Sketch
-  - Webflow
-- Programming Languages & Frameworks
-  - Proficient
-    - HTML
-    - CSS
-    - Sass
-    - Tailwind CSS
-    - Javascript
-    - Typescript
-    - Node
-    - React
-    - Remix
-    - Git
-  - Mid
-    - Terraform
-    - SQL
-    - Timescale DB
-  - Know enough to be dangerous
-    - NextJS
-    - Vue
-    - Svelte
-    - Ember
-    - Angular
-    - Ruby on Rails
-    - Kafka Streams
-- DevOps
-  - Github Actions and Workflows
-- Observability
-  - Grafana
+### Design Programs
+
+- Figma
+- Adobe Creative Suite
+- Sketch
+- Webflow
+
+### Programming Languages & Frameworks
+
+- Proficient
+  - React
+  - Typescript
+  - Javascript
+  - HTML
+  - CSS
+  - Sass
+  - Tailwind CSS
+  - Remix
+  - Node
+  - Git
+- Mid
+  - Terraform
+  - SQL
+  - Timescale DB
+  - React Native
+- Know enough to be dangerous
+  - NextJS
+  - Vue
+  - Svelte
+  - Ember
+  - Angular
+  - Ruby on Rails
+  - Kafka Streams
+- Learning
+  - Python
+  - Go
+
+### DevOps
+
+- Github Actions and Workflows
+- Netlify
+
+### Observability
+
+- Grafana
+- AWS Cloudwatch
+- Pingdom
+- Mixpanel
+- Google Analytics
+
+### Cloud & Microservies
+
+- AWS
+  - Lambda
+  - API Gateway
+  - ECS with Fargate
+  - Dynamo
   - Cloudwatch
-  - Pingdom
-  - Mixpanel
-  - Google Analytics
-- Cloud
-  - AWS
-    - Lambda
-    - API Gateway
-    - ECS with Fargate
-    - Dynamo
-    - Cloudwatch
-    - Cloudfront
-    - S3
-    - SQS Queues
-    - SSM Parameters
-    - Cognito
-    - IAM Auth
-    - EC2 Load Balancers
-  - Google Cloud
-    - Cloud Storage
-    - Cloud Run Jobs
-    - Cloud Scheduler
-- Kanban: Jira, Trello, Github Projects
+  - Cloudfront
+  - S3
+  - SQS Queues
+  - SSM Parameters
+  - Cognito
+  - IAM Auth
+  - EC2 Load Balancers
+- Google Cloud
+  - Cloud Storage
+  - Cloud Run Jobs
+  - Cloud Scheduler
+- Netlify Functions
+
+### Other
+
 - Agile development
+- Kanban
+  - Jira
+  - Trello
+  - Github Projects
 - Accessibility
   - Helped lead a11y initiative at WWT - creating cheatsheets, training, researching automatic accessibility testing, etc.
-- Life
-  - Charcuterie boards
-  - Sewing
-  - Drawing
-  - Painting
-  - Ceramics
-  - Woodworking
-  - Archery
-  - Bolognese Martial Arts
+- Sewing
+- Drawing
+- Painting
+- Ceramics
+- Woodworking
+- Archery
+- Charcuterie boards
+- Bolognese Martial Arts

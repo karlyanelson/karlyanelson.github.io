@@ -65,6 +65,7 @@
       <nav class="flex items-center justify-center flex-wrap gap-1">
         <a href="/" {% if page.url == '/' %} aria-current="page" {% endif %}>About Me</a>
         <a href="/posts" {% if '/posts' in page.url %} aria-current="page" {% endif %}>Articles</a>
+        {# <a href="/resume"{% if '/resume' in page.url %} aria-current="page" {% endif %}>Resume</a> #}
         <a href="/search"{% if '/search' in page.url %} aria-current="page" {% endif %}>Search</a>
       </nav>
     </header>
@@ -72,7 +73,7 @@
       {% block content %} {{ content | safe }} {% endblock %}
     </main>
     <footer class="text-secondary p-8 max-w-7xl mx-auto w-full text-sm">
-      <div class="flex items-center justify-between">
+      <div class="flex flex-col sm:flex-row items-center gap-4 justify-between">
         <p class="text-left flex-none">
           &copy; 2024 Karly Nelson
         </p>

@@ -5,12 +5,25 @@ layout: layouts/default.njk
 <div class="container">
   <h1 class="mb-2">{{title}}</h1>
   <p class="text-secondary">{{description}}</p>
+
+  {% if showTOC %}
+
+  <details class="mt-8" open>
+    <summary class="mb-4">Table of Contents</summary>
+    <aside
+      class="border border-solid border-slate-600 px-4 py-6 rounded bg-black bg-opacity-25"
+    >
+      {{ content | toc | safe }}
+    </aside>
+  </details>
+
+  {% endif %}
 </div>
 
 <div class="mt-6 relative -bottom-1">{% include "svgs/top-curve.njk" %}</div>
 
 <div
-  class="article-content bg-is-light is-on-light relative z-2 pt-6 pb-16 text-primary"
+  class="bg-is-light is-on-light relative z-2 pt-6 pb-16 text-primary {% if isResume %} resume-content {% endif %} {% if articleStyles %} article-content {% endif %}"
 >
   <div class="container">{{content | safe}}</div>
 </div>
