@@ -74,7 +74,7 @@ draft: true
 The content of your post goes here...
 ```
 
-I use [YAML syntax](https://learnxinyminutes.com/docs/yaml/). You can use (other formats too)[https://www.11ty.dev/docs/data-frontmatter/#alternative-front-matter-formats].
+I use [YAML syntax](https://learnxinyminutes.com/docs/yaml/). You can use [other formats too](https://www.11ty.dev/docs/data-frontmatter/#alternative-front-matter-formats).
 
 #### Use in pages
 

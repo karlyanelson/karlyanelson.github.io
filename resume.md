@@ -1,7 +1,7 @@
 ---
 layout: layouts/page.njk
 title: Resume
-description: I'm currently a Senior Software Engineer and UX Designer at Ledger Works in St. Louis
+description: I'm currently a Senior Software Engineer and UX Designer at Ledger Works in St. Louis.
 isResume: true
 articleStyles: true
 showTOC: true
