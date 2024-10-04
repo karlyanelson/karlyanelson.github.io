@@ -138,7 +138,7 @@ If we use `toLocaleString()` our date `Thu Sep 19 2024 08:38:16 GMT-0500 (Centra
 
 You can pass options to [toLocaleString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString) to change how you want it formatted - like if you want it to show the time or not.
 
-#### Example toLocalString formatting
+#### Example toLocaleString formatting
 
 `toLocaleString` takes two arguments, `locales` and `options`, like `toLocaleString(locales, options)`;
 
@@ -149,11 +149,17 @@ If we just want it to render based on where the user is located, we pass in `und
 `options` is an object. If we want our date formatted like `September 19, 2024`, we'd pass in the `options` like this:
 
 ```js
-{
-    year: 'numeric',
-    month:'long',
-    day: 'numeric'
-}
+const options = {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+
+const locales = undefined;
+
+const date = new Date(); // gets today's date by default
+
+date.toLocaleString(locales, options);
 ```
 
 [Read the docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options) to see all your options.
