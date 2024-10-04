@@ -130,6 +130,7 @@ Collaborated with a small marketing team as part of a leadership development con
   - Cognito
   - IAM Auth
   - EC2 Load Balancers
+  - RDS
 - Google Cloud
   - Cloud Storage
   - Cloud Run Jobs
