@@ -118,7 +118,7 @@ How to add dynamic fields from the CMS collection item:
 
 ### Bonus Points: Full HTML example
 
-If you inspect the code of this [AllRecipes.com Chicken Parmesan recipe](https://www.allrecipes.com/recipe/246867/new-improved-chicken-parmesan/), you can see the following script tag, which includes a very fleshed out example of the Recipe schema. You can try this on any recipe site you like to see how they use the schema.
+If you [inspect the code](https://developer.chrome.com/docs/devtools/open) of this [AllRecipes.com Chicken Parmesan recipe](https://www.allrecipes.com/recipe/246867/new-improved-chicken-parmesan/), you can see the following script tag, which includes a very fleshed out example of the Recipe schema. You can try this on any recipe site you like to see how they use the schema.
 
 ```json
 <script id="allrecipes-schema_1-0" type="application/ld+json">
