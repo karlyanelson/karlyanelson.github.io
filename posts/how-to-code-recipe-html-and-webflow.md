@@ -26,11 +26,22 @@ Add your recipe info as a json block in a `<script type="application/ld+json">` 
 
 In order for Google to know which parts of your page are recipe instructions - ingredients, steps, time to cook, etc - versus other kinds of content - like the long, winding story you'll probably tell before your recipe - you need to put the recipe instructions in a JSON block on the page as well. So your recipe content will be duplicated in two forms - as html on the page for users to read, and as JSON in a script tag for computers to read.
 
-Google uses the [Recipe](https://schema.org/Recipe) schema from [schema.org](https://schema.org/).
+You'll need to follow the [Recipe](https://schema.org/Recipe) schema from [schema.org](https://schema.org/) when creating your JSON block, because that's the common standard. For example, if you wanted to add your recipe's list of ingredients, that would look like:
+
+```json
+{
+  "recipeIngredient": [
+    "0.5 teaspoon olive oil",
+    "2 tablespoons grated Parmigiano-Reggiano cheese for topping",
+    "1 cup marinara sauce, heated, or more as needed",
+    "1 tablespoon chopped fresh flat-leaf parsley"
+  ]
+}
+```
 
 ### Basic HTML example
 
-You put the json content in a `script` block with a `type` of `"application/ld+json"`. You can also test your code with Google via their [Rich Results Test](https://search.google.com/test/rich-results) to see what it looks like and if it's valid. See the simple example below from [Google developer docs](https://developers.google.com/search/docs/appearance/structured-data/recipe).
+You'll put the JSON schema content in a `script` block with a `type` of `"application/ld+json"`, either in your `head` tag or at the end of your `body` tag. You can also test your code with Google via their [Rich Results Test](https://search.google.com/test/rich-results) to see what it looks like and if it's valid. See the simple example below from [Google developer docs](https://developers.google.com/search/docs/appearance/structured-data/recipe).
 
 ```html
 <html>
