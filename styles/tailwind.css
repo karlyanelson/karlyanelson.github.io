@@ -76,7 +76,7 @@ body {
 
   .bg-main {
     background-color: var(--bg-dark);
-    @apply bg-gradient-to-tl from-sky-900  to-blue-950;
+    @apply bg-gradient-to-tl from-sky-900 to-blue-950;
   }
 
   .font-family-basic {

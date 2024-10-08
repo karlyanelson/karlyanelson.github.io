@@ -11,13 +11,13 @@ showTOC: true
 
 ### Washington University in St. Louis
 
-Sam Fox School of Design & Visual Arts
-B.F.A. in Communication Design 2014
+**Sam Fox School of Design & Visual Arts**  
+B.F.A. in Communication Design, 2014  
 Second Major in Anthropology
 
 ### Santa Reparata International School of Art
 
-Study Abroad • Spring 2012 • Florence, Italy
+**Study Abroad** • Spring 2012 • Florence, Italy
 
 ## 💼 Job History
 
@@ -25,43 +25,47 @@ Study Abroad • Spring 2012 • Florence, Italy
 
 _April 2022 to present • Remote_
 
-Full-stack engineer and designer at a small startup developing risk-ops-as-a-service. Multi-chain risk-management, financial modeling, real-time monitoring, and eventing/notification platform across Avalanche, Ethereum, Arbitrum, Polygon, Hedera and more.
+As a full-stack engineer and designer at a small startup, I contribute to the development of a risk-ops-as-a-service platform focused on multi-chain risk management, financial modeling, real-time monitoring, and event notifications across Avalanche, Ethereum, Arbitrum, Polygon, Hedera, and more.
 
-- UX Design, frontend development, API development, backend development, cloud infrastructure development, devops, observability
-- Agile development team
-- Deploy to production multiple times a day
+- Engage in UX design, frontend development, API development, backend development, cloud infrastructure, DevOps, and observability.
+- Collaborate within an agile development team.
+- Frequently deploy to production multiple times a day.
 
 ### Worldwide Technology • Frontend Engineer
 
 _Jan 2021 - April 2022 • St. Louis, MO_
 
-Worked on React apps, helped lead accessibility initiative. Wrote figma plugins. Implemented and managed design system tokens library for a suite of applications across platforms and teams - React Web, React Native, Tailwind, Android, iOS.
+Developed React applications and led an accessibility initiative. Created Figma plugins and implemented a design system token library, ensuring consistency across multiple applications for various platforms, including React Web, React Native, Tailwind, Android, and iOS.
 
 ### Worldwide Technology • UX Consultant
 
 _May 2019 - Jan 2021 • St. Louis, MO_
 
-Integrated with agile development teams. Managed design system for a suite of applications across platforms and teams. Lead design for a product across iPhone, iPad, and web across multiple teams.
+Collaborated with agile development teams to manage a design system for a suite of applications across platforms. Led design efforts for a product used on iPhone, iPad, and web, coordinating across multiple teams to ensure cohesive user experiences.
 
 ### Asynchrony Labs • UX Designer
 
 _Jun 2014 - May 2019 • St. Louis, MO_
-Designed mobile applications for iPhone, iPad and Apple Watch. Performed usability and user experience assessments for mobile applications. Designed and engineered the front-end for various responsive web applications as part of agile development teams. Designed t-shirts, posters, presentations, and any other company design needs.
+
+Designed mobile applications for iPhone, iPad, and Apple Watch. Conducted usability assessments and user experience evaluations for mobile applications. Engineered front-end solutions for various responsive web applications as part of agile teams. Additionally, created design assets for company branding, including t-shirts, posters, and presentations.
 
 ### Bebop • UX Design Intern
 
 _January 2014 • San Francisco, CA_
-Shadowed the User Experience Designer at a small startup. Developed preliminary interface design concepts and color schemes for a suite of iPhone applications.
+
+Shadowed the User Experience Designer at a startup. Assisted in developing preliminary interface design concepts and color schemes for a suite of iPhone applications.
 
 ### Student Involvement & Leadership • Graphic Designer
 
 _August 2013 – May 2014 • St. Louis, MO_
-Created promotional materials for various Washington University programs. Created a new brand identity, developed brand guidelines, and created templates for a variety of marketing materials.
+
+Designed promotional materials for various Washington University programs. Established a new brand identity, developed brand guidelines, and created templates for diverse marketing materials.
 
 ### LDi • Graphic Design Intern
 
 _June – August 2013 • Tianjin, China_
-Collaborated with a small marketing team as part of a leadership development consulting firm. Concepted and developed marketing materials for international schools, assisted marketing director with supplemental work, and managed the design of an international prayer calendar.
+
+Collaborated with a marketing team at a leadership development consulting firm. Developed marketing materials for international schools, assisted the marketing director with supplemental projects, and managed the design of an international prayer calendar.
 
 ## ⚔️ Skills
 
@@ -74,7 +78,7 @@ Collaborated with a small marketing team as part of a leadership development con
 
 ### Programming Languages & Frameworks
 
-- Proficient
+- **Proficient**
   - React
   - Typescript
   - Javascript
@@ -89,7 +93,7 @@ Collaborated with a small marketing team as part of a leadership development con
   - SQL (Postgres)
   - Timescale DB
   - React Native
-- Know enough to be dangerous
+- **Know enough to be dangerous**
   - NextJS
   - Vue
   - Svelte
@@ -97,7 +101,7 @@ Collaborated with a small marketing team as part of a leadership development con
   - Angular
   - Ruby on Rails
   - Kafka Streams
-- Learning
+- **Learning**
   - Python
   - Go
 
@@ -109,20 +113,20 @@ Collaborated with a small marketing team as part of a leadership development con
 ### Observability
 
 - Grafana
-- AWS Cloudwatch
+- AWS CloudWatch
 - Pingdom
 - Mixpanel
 - Google Analytics
 
 ### Cloud & Microservices
 
-- AWS
+- **AWS**
   - Lambda
   - API Gateway
   - ECS with Fargate
-  - Dynamo
-  - Cloudwatch
-  - Cloudfront
+  - DynamoDB
+  - CloudWatch
+  - CloudFront
   - S3
   - SQS Queues
   - SSM Parameters
@@ -130,26 +134,16 @@ Collaborated with a small marketing team as part of a leadership development con
   - IAM Auth
   - EC2 Load Balancers
   - RDS
-- Google Cloud
+- **Google Cloud**
   - Cloud Storage
   - Cloud Run Jobs
   - Cloud Scheduler
-- Netlify Functions
+- **Netlify Functions**
 
 ### Other
 
 - Agile development
-- Kanban
-  - Jira
-  - Trello
-  - Github Projects
+- Kanban (Jira, Trello, Github Projects)
 - Accessibility
-  - Helped lead a11y initiative at WWT - creating cheatsheets, training, researching automatic accessibility testing, etc.
-- Sewing
-- Drawing
-- Painting
-- Ceramics
-- Woodworking
-- Archery
-- Historical European Martial Arts
-- Charcuterie boards
+  - Led accessibility initiatives at WWT, creating cheat sheets, training materials, and conducting research on automated accessibility testing.
+- Hobbies: Sewing, Drawing, Painting, Ceramics, Woodworking, Archery, Historical European Martial Arts, Charcuterie Boards
