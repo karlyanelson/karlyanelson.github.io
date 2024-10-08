@@ -110,11 +110,23 @@ h4 {
 /* Nav */
 
 header nav a {
-  @apply px-4 py-2 rounded text-primary text-lg sm:text-xl;
+  @apply px-4 py-2 rounded text-primary text-lg sm:text-xl flex items-center gap-2;
 }
 
 header nav a[aria-current="page"] {
   @apply bg-gradient-to-tl from-sky-800  to-blue-900;
+}
+
+.nav-emoji {
+  filter: grayscale(100%);
+  /* opacity: 0.5; */
+  @apply transition-all ease-in-out duration-300 relative top-[2px];
+}
+
+header nav a[aria-current="page"] .nav-emoji,
+header nav a:hover .nav-emoji {
+  filter: grayscale(0%);
+  /* opacity: 1; */
 }
 
 /* Links */

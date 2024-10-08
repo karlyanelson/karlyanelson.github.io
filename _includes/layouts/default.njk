@@ -63,10 +63,10 @@
     >
       <a href="/" class="text-primary font-extrabold">Karly Nelson</a>
       <nav class="flex items-center justify-center flex-wrap gap-1">
-        <a href="/" {% if page.url == '/' %} aria-current="page" {% endif %}>About Me</a>
-        <a href="/posts" {% if '/posts' in page.url %} aria-current="page" {% endif %}>Articles</a>
+        <a href="/" {% if page.url == '/' %} aria-current="page" {% endif %}><span class="nav-emoji">🧀</span> About Me</a>
+        <a href="/posts" {% if '/posts' in page.url %} aria-current="page" {% endif %}><span class="nav-emoji">✏️</span>Articles</a>
         {# <a href="/resume"{% if '/resume' in page.url %} aria-current="page" {% endif %}>Resume</a> #}
-        <a href="/search"{% if '/search' in page.url %} aria-current="page" {% endif %}>Search</a>
+        <a href="/search"{% if '/search' in page.url %} aria-current="page" {% endif %}><span class="nav-emoji">🔍</span>Search</a>
       </nav>
     </header>
     <main class="mt-10 sm:mt-24 pb-6">
