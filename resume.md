@@ -85,9 +85,8 @@ Collaborated with a small marketing team as part of a leadership development con
   - Remix
   - Node
   - Git
-- Mid
   - Terraform
-  - SQL
+  - SQL (Postgres)
   - Timescale DB
   - React Native
 - Know enough to be dangerous
@@ -115,7 +114,7 @@ Collaborated with a small marketing team as part of a leadership development con
 - Mixpanel
 - Google Analytics
 
-### Cloud & Microservies
+### Cloud & Microservices
 
 - AWS
   - Lambda
@@ -152,5 +151,5 @@ Collaborated with a small marketing team as part of a leadership development con
 - Ceramics
 - Woodworking
 - Archery
+- Historical European Martial Arts
 - Charcuterie boards
-- Bolognese Martial Arts
