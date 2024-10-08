@@ -1,7 +1,7 @@
 ---
 layout: layouts/page.njk
 title: Resume
-description: I'm currently a Senior Software Engineer and UX Designer at Ledger Works in St. Louis.
+description: I'm currently a Senior Software Engineer and UX Designer at Ledger Works.
 isResume: true
 articleStyles: true
 showTOC: true
@@ -25,7 +25,7 @@ Study Abroad • Spring 2012 • Florence, Italy
 
 _April 2022 to present • Remote_
 
-Full-stack engineer and designer at a small start-up developing risk-ops-as-a-service. Multi-chain risk-management, financial modeling, real-time monitoring and eventing/notification platform across Hedera, Avalanche, Ethereum, Arbitrum, Polygon and more.
+Full-stack engineer and designer at a small startup developing risk-ops-as-a-service. Multi-chain risk-management, financial modeling, real-time monitoring, and eventing/notification platform across Avalanche, Ethereum, Arbitrum, Polygon, Hedera and more.
 
 - UX Design, frontend development, API development, backend development, cloud infrastructure development, devops, observability
 - Agile development team
@@ -35,13 +35,13 @@ Full-stack engineer and designer at a small start-up developing risk-ops-as-a-se
 
 _Jan 2021 - April 2022 • St. Louis, MO_
 
-Worked on React apps, helped lead accessibility initiative. Wrote figma plugins. Implemented design system and tokens I helped design across various platforms and teams - React Web, React Native, Tailwind, Android, iOS. Managed design system for a suite of applications across platforms and teams, and was a software engineer on one team.
+Worked on React apps, helped lead accessibility initiative. Wrote figma plugins. Implemented and managed design system tokens library for a suite of applications across platforms and teams - React Web, React Native, Tailwind, Android, iOS.
 
 ### Worldwide Technology • UX Consultant
 
 _May 2019 - Jan 2021 • St. Louis, MO_
 
-Integrated with agile development teams. Design systems, design tokens, figma. Across web and mobile. Managed design system for a suite of applications across platforms and teams. Lead design for a product across iPhone, iPad, and web across multiple teams.
+Integrated with agile development teams. Managed design system for a suite of applications across platforms and teams. Lead design for a product across iPhone, iPad, and web across multiple teams.
 
 ### Asynchrony Labs • UX Designer
 
@@ -51,7 +51,7 @@ Designed mobile applications for iPhone, iPad and Apple Watch. Performed usabili
 ### Bebop • UX Design Intern
 
 _January 2014 • San Francisco, CA_
-Shadowed the User Experience Designer at a small start-up. Developed preliminary interface design concepts and color schemes for a suite of iPhone applications.
+Shadowed the User Experience Designer at a small startup. Developed preliminary interface design concepts and color schemes for a suite of iPhone applications.
 
 ### Student Involvement & Leadership • Graphic Designer
 
