@@ -1,7 +1,7 @@
 ---
 lastUpdated: 2024-10-01
 tags: post
-title: How to easily post custom metrics to Cloudwatch from a Lambda
+title: How to easily post custom metrics to Cloudwatch from a Lambda 🐑
 description: If you want to easily generate custom AWS Cloudwatch metrics in AWS Lambda functions without having to do a bunch of custom code or batching.
 techStack:
   - name: AWS Lambda

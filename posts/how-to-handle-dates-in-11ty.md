@@ -1,7 +1,7 @@
 ---
 lastUpdated: 2024-09-25
 tags: post
-title: How to handle dates in Eleventy (11ty)
+title: How to handle dates in Eleventy (11ty) 🌹
 description: Use the last modified date of post and format it nicely in Eleventy.
 techStack:
   - name: Eleventy (11ty)

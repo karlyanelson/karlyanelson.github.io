@@ -37,7 +37,7 @@
       rel="stylesheet"
     />
 
- <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Tiny5&display=swap" rel="stylesheet">
+ {# <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Tiny5&display=swap" rel="stylesheet"> #}
 
 
     {# Search - Pagefind JS #}
@@ -67,18 +67,30 @@
       <a href="/" class="text-primary font-extrabold">Karly Nelson</a>
       <nav class="flex items-center justify-center flex-wrap gap-1">
         <a href="/" {% if page.url == '/' %} aria-current="page" {% endif %}>
-            {# <span class="nav-icon">
-              {% include "svgs/pizza-line.svg" %}
-              {% include "svgs/pizza-color.svg" %}
-            </span>  #}
-            <span>About Me</span> </a>
+          <span class="nav-emoji">🍕</span>
+         {# <span class="nav-link-img">
+            <img class="gif-motion" src="/images/nav-icons/pizza_drip.gif" />
+            <img class="gif-still" src="/images/nav-icons/pizza_drip-still.gif" />
+          </span> #}
+          <span>About Me</span>
+        </a>
         <a href="/posts" {% if '/posts' in page.url %} aria-current="page" {% endif %}>
-        {# <span class="nav-emoji">✏️</span> #}
-        Articles</a>
+          <span class="nav-emoji">✍🏻</span>
+          {# <span class="nav-link-img">
+            <img class="gif-motion" src="/images/nav-icons/dino-typing.gif" />
+            <img class="gif-still" src="/images/nav-icons/dino-typing-still.gif" />
+          </span> #}
+          <span>Articles</span>
+        </a>
         {# <a href="/resume"{% if '/resume' in page.url %} aria-current="page" {% endif %}>Resume</a> #}
         <a href="/search"{% if '/search' in page.url %} aria-current="page" {% endif %}>
-        {# <span class="nav-emoji">🔍</span> #}
-        Search</a>
+          <span class="nav-emoji">🔍</span>
+          {# <span class="nav-link-img">
+            <img class="gif-motion" src="/images/nav-icons/search.webp" />
+            <img class="gif-still" src="/images/nav-icons/search-still.gif" />
+          </span> #}
+          <span>Search</span>
+        </a>
       </nav>
     </header>
     <main class="mt-10 sm:mt-24 pb-6">

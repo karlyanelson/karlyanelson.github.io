@@ -1,6 +1,6 @@
 ---
 tags: post
-title: How to add your own custom color palette to Chart JS
+title: How to add your own custom color palette to Chart JS 📊
 description: Be able to have a longer list of available colors that ChartJS can automatically loop through.
 techStack:
   - name: Typescript
