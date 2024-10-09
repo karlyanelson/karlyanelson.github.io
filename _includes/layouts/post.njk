@@ -6,6 +6,8 @@ layout: layouts/default.njk
   <div class="container">
     {% if draft %}
     <div class="text-lg">{% include "under-construction.njk" %}</div>
+    {% endif %} {% if emoji %}
+    <div class="text-[5rem] leading-none mb-4">{{emoji}}</div>
     {% endif %}
 
     <h1 class="mb-8">{{title}}</h1>

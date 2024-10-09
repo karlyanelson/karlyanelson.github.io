@@ -8,22 +8,25 @@ eleventyImport:
 
 <ul>
   {%- for post in collections.post | reverse -%}
-  <li class="mb-10">
-    {% if post.data.draft %}
-    <div class="text-xs">{% include "under-construction.njk" %}</div>
-    {% endif %}
-    <h2 class="text-2xl">
-      <a class="text-action fancy-hover" href="{{ post.url }}"
-        >{{ post.data.title }}</a
-      >
-    </h2>
-    <p class="text-secondary font-light text-sm my-1">
-      {{post.date | postDateShort}} {% for tech in post.data.techStack %}
-      <span class="mx-2"> | </span>
-      <span> {{tech.name}} </span>
-      {% endfor %}
-    </p>
-    <p class="text-sm text-primary">{{ post.data.description }}</p>
+  <li class="mb-10 flex items-baseline gap-3">
+    <div class="relative top-1 text-3xl">{{post.data.emoji}}</div>
+    <div>
+      {% if post.data.draft %}
+      <div class="text-xs">{% include "under-construction.njk" %}</div>
+      {% endif %}
+      <h2 class="text-2xl">
+        <a class="text-action fancy-hover" href="{{ post.url }}"
+          >{{ post.data.title }}</a
+        >
+      </h2>
+      <p class="text-secondary font-light text-sm my-1">
+        {{post.date | postDateShort}} {% for tech in post.data.techStack %}
+        <span class="mx-2"> | </span>
+        <span> {{tech.name}} </span>
+        {% endfor %}
+      </p>
+      <p class="text-sm text-primary">{{ post.data.description }}</p>
+    </div>
   </li>
   {%- endfor -%}
 </ul>

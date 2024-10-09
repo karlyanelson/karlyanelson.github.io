@@ -1,6 +1,7 @@
 ---
 tags: post
-title: Pass in CSS Variables through a <style> tag 🎩
+emoji: 🎩
+title: Pass in CSS Variables through a <style> tag
 description: Be able to pass in CSS variable values through a inline style tag on an element. Useful for Squarespace code blocks.
 techStack:
   - name: CSS

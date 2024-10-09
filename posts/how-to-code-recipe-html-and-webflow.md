@@ -1,6 +1,7 @@
 ---
 tags: post
-title: How to code a recipe in HTML and on Webflow 🍝
+emoji: 🍝
+title: How to code a recipe in HTML and on Webflow
 description: How to use the Recipe schema in plain html or on Webflow to have the correct metadata for your recipe - so it can be imported to recipe apps, etc.
 techStack:
   - name: HTML
