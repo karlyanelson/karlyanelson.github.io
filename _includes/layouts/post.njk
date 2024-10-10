@@ -4,10 +4,10 @@ layout: layouts/default.njk
 
 <article>
   <div class="container">
-    {% if draft %}
-    <div class="text-lg">{% include "under-construction.njk" %}</div>
-    {% endif %} {% if emoji %}
+    {% if emoji %}
     <div class="text-[5rem] leading-none mb-4">{{emoji}}</div>
+    {% endif %} {% if draft %}
+    <div class="text-lg">{% include "under-construction.njk" %}</div>
     {% endif %}
 
     <h1 class="mb-8">{{title}}</h1>

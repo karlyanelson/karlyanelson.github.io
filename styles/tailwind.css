@@ -255,6 +255,14 @@ code:not([class*="language-"]) {
   @apply bg-gradient-to-tl from-sky-800  to-blue-900;
 }
 
+.chip-under-construction {
+  @apply bg-orange-800 bg-opacity-50 text-white font-bold px-2 py-1 rounded-full inline-block mb-2;
+}
+
+.is-on-light .chip-under-construction {
+  @apply bg-orange-600 bg-opacity-15 text-orange-800;
+}
+
 /* Articles */
 
 .bg-is-light {
