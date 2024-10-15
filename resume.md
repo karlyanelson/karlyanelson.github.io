@@ -41,7 +41,7 @@ Developed React applications and led an accessibility initiative. Created Figma 
 
 _May 2019 - Jan 2021 • St. Louis, MO_
 
-Collaborated with agile development teams to manage a design system for a suite of applications across platforms. Led design efforts for a product used on iPhone, iPad, and web, coordinating across multiple teams to ensure cohesive user experiences.
+Worldwide Technology acquired Asynchrony Labs, and job title changed to reflect my breadth of skill in design, research, and frontend. Collaborated with agile development teams to manage a design system for a suite of applications across platforms. Led design efforts for a product used on iPhone, iPad, and web, coordinating across multiple teams to ensure cohesive user experiences.
 
 ### Asynchrony Labs • UX Designer
 
