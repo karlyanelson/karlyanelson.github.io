@@ -11,8 +11,8 @@
   --action-on-dark: #7dd3fc /* sky-300 */;
 
   --bg-dark: #082f49 /* big-sky-950 */;
-  --bg-light: var(--text-secondary-on-dark);
-  --bg-code: #e2e8f0 /*  slate-200 */;
+  --bg-light: #e6f1ff;
+  --bg-code: #cbd5e1 /*  slate-300 */;
 
   /* Page Find Search */
   --pagefind-ui-primary: #eeeeee;
@@ -305,7 +305,7 @@ code:not([class*="language-"]) {
 }
 
 .article-content blockquote {
-  @apply border-l-4 border-slate-800 pl-4 py-4 my-4 bg-slate-400 bg-opacity-25;
+  @apply border-l-4 border-sky-700 px-4 py-2 my-4 rounded bg-sky-600 bg-opacity-10;
 }
 
 /* Table of Contents */

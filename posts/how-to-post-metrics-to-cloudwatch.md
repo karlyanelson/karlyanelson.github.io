@@ -75,7 +75,7 @@ This works out of the box for Lambda - they run Cloudwatch Agent on your behalf.
 
 Here is a [Terraform](https://registry.terraform.io/providers/hashicorp/aws/latest/docs) example of how to put your application container and Cloudwatch Agent sidecar container in the same ECS task definition:
 
-```tf
+```js
 resource "aws_ecs_task_definition" "main" {
   family                   = "mycooltaskfamily"
   requires_compatibilities = ["FARGATE"]
