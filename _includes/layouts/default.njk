@@ -36,9 +36,11 @@
       href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
-
  {# <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Tiny5&display=swap" rel="stylesheet"> #}
 
+    {% if canonical %}
+    <link rel="canonical" href="{{canonical}}" />
+    {% endif %}
 
     {# Search - Pagefind JS #}
     <script src="/pagefind/pagefind-ui.js"></script>

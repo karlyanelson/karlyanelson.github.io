@@ -5,6 +5,7 @@ description: I'm currently a Senior Software Engineer and UX Designer at Ledger 
 isResume: true
 articleStyles: true
 showTOC: true
+canonical: https://karlynelson.com/resume
 ---
 
 ## 🎓 Education
