@@ -95,6 +95,7 @@ Collaborated with a marketing team at a leadership development consulting firm. 
   - Timescale DB
   - React Native
 - **Know enough to be dangerous**
+  - Python
   - NextJS
   - Vue
   - Svelte
@@ -102,9 +103,6 @@ Collaborated with a marketing team at a leadership development consulting firm. 
   - Angular
   - Ruby on Rails
   - Kafka Streams
-- **Learning**
-  - Python
-  - Go
 
 ### DevOps
 
