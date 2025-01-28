@@ -84,6 +84,14 @@
           </span> #}
           <span>Articles</span>
         </a>
+        <a href="/resume" {% if '/resume' in page.url %} aria-current="page" {% endif %}>
+          <span class="nav-emoji">📜</span>
+          {# <span class="nav-link-img">
+            <img class="gif-motion" src="/images/nav-icons/dino-typing.gif" />
+            <img class="gif-still" src="/images/nav-icons/dino-typing-still.gif" />
+          </span> #}
+          <span>Resume</span>
+        </a>
         {# <a href="/resume"{% if '/resume' in page.url %} aria-current="page" {% endif %}>Resume</a> #}
         <a href="/search"{% if '/search' in page.url %} aria-current="page" {% endif %}>
           <span class="nav-emoji">🔍</span>
