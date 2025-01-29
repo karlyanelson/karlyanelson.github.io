@@ -32,10 +32,10 @@ Use [node-cache](https://github.com/node-cache/node-cache) package
 7. Add that data to the cache at its unique key with `cache.set`
 8. Congratulations you have a cache!
 
-```ts
+```js
 import NodeCache from "node-cache";
 
-const defaultCacheOptions: NodeCache.Options = {
+const defaultCacheOptions = {
   stdTTL: 60, // Leave data around for 60s / 1 minute
   checkperiod: 120, // Check for expired data every 120s / 2 minutes
 };
@@ -45,7 +45,7 @@ const cache = new NodeCache(defaultCacheOptions);
 const getData = async (param1, param2) => {
   const cacheKey = `${param1}_${param2}`;
 
-  const cachedItem = cache.get<DataStuff>(cacheKey);
+  const cachedItem = cache.get(cacheKey);
   if (cachedItem) return cachedItem;
 
   const data = await someAsyncFunction(param1, param2);
@@ -113,7 +113,7 @@ const getBalanceDataWithCache = async (address, blockNumber) => {
 
   const cachedItem = cache.get<YourTypeHere>(cacheKey); // YourTypeHere is the type of the data in the cache
 
-  if (cachedItem) return cachedItem; // If we already have the balanche for that address in this block, we don't need it again
+  if (cachedItem) return cachedItem; // If we already have the balance for that address in this block, we don't need it again
 
   const data = await getAddressBalance(address, blockNumber); // your function that gets the balance
 
