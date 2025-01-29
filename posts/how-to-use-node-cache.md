@@ -1,7 +1,7 @@
 ---
 lastUpdated: 2025-01-29
 tags: post
-emoji: 💵
+emoji: ⏳
 title: How to use node-cache to cache data for a set time period
 description: If you have a loop where you're fetching, and don't want to unnecessarily fetch up-to-date data you just grabbed, you can use node-cache to easily save it to a temporary cache and roll off old data.
 techStack:
