@@ -24,7 +24,7 @@ Second Major in Anthropology
 
 ### Ledger Works • Senior Software Engineer
 
-_2022-present • Remote_
+_2022 - present • Remote_
 
 As a full-stack engineer and designer at a small startup, I contribute to the development of a risk-ops-as-a-service platform focused on multi-chain risk management, financial modeling, and real-time monitoring.
 
