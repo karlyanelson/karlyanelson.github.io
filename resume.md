@@ -24,47 +24,63 @@ Second Major in Anthropology
 
 ### Ledger Works • Senior Software Engineer
 
-_April 2022 to present • Remote_
+_2022-present • Remote_
 
-As a full-stack engineer and designer at a small startup, I contribute to the development of a risk-ops-as-a-service platform focused on multi-chain risk management, financial modeling, real-time monitoring, and event notifications across Avalanche, Ethereum, Arbitrum, Polygon, Hedera, and more.
+As a full-stack engineer and designer at a small startup, I contribute to the development of a risk-ops-as-a-service platform focused on multi-chain risk management, financial modeling, and real-time monitoring.
 
-- Engage in UX design, frontend development, API development, backend development, cloud infrastructure, DevOps, and observability.
+- Design multiple web applications, marketing site, and branding materials.
+- Frontend development in React, Remix, and NextJS.
+- API development using Node and AWS Lambda.
+- Manage a PostgreSQL Timescale database.
+- Manage and deploy AWS and Google cloud infrastructure.
+- Monitor applications with Grafana and Cloudwatch alarms.
+- Develop automated deployment pipelines using Github Actions.
 - Collaborate within an agile development team.
-- Frequently deploy to production multiple times a day.
+- Deploy to production multiple times a day.
 
 ### Worldwide Technology • Frontend Engineer
 
-_Jan 2021 - April 2022 • St. Louis, MO_
+_2021 - 2022 • St. Louis, MO_
 
-Developed React applications and led an accessibility initiative. Created Figma plugins and implemented a design system token library, ensuring consistency across multiple applications for various platforms, including React Web, React Native, Tailwind, Android, and iOS.
+- Developed a React web application with a Ruby on Rails backend.
+- Co-led an accessibility initiative. Created accessibility cheatsheets and researched effective accessibility testing processes for React web and React Native applications.
+- Developed Figma plugins to support the design team’s processes.
+- Implemented a design system token library.
+- Ensured design system consistency across multiple applications for various platforms, including React Web, React Native, Tailwind, Android, and iOS.
 
 ### Worldwide Technology • UX Consultant
 
-_May 2019 - Jan 2021 • St. Louis, MO_
+_2019 - 2021 • St. Louis, MO_
 
-Worldwide Technology acquired Asynchrony Labs, and job title changed to reflect my breadth of skill in design, research, and frontend. Collaborated with agile development teams to manage a design system for a suite of applications across platforms. Led design efforts for a product used on iPhone, iPad, and web, coordinating across multiple teams to ensure cohesive user experiences.
+- Worldwide Technology acquired Asynchrony Labs, and my job title changed to reflect my breadth of skill in design, research, and frontend.
+- Collaborated with agile development teams to manage a design system for a suite of applications across platforms.
+- Led design efforts for a product used on iPhone, iPad, and web, coordinating across multiple teams to ensure cohesive user experiences.
+- Engineered frontend solutions for various responsive React web applications as part of agile teams using test-driven development.
 
 ### Asynchrony Labs • UX Designer
 
-_Jun 2014 - May 2019 • St. Louis, MO_
+_2014 - 2019 • St. Louis, MO_
 
-Designed mobile applications for iPhone, iPad, and Apple Watch. Conducted usability assessments and user experience evaluations for mobile applications. Engineered front-end solutions for various responsive web applications as part of agile teams. Additionally, created design assets for company branding, including t-shirts, posters, and presentations.
+- Designed mobile applications for iPhone, iPad, and Apple Watch.
+- Conducted usability assessments and user experience evaluations for mobile applications.
+- Engineered frontend solutions for various responsive web applications as part of agile teams in Ember, Angular, and React.
+- Designed t-shirts, posters, and presentations.
 
 ### Bebop • UX Design Intern
 
-_January 2014 • San Francisco, CA_
+_2014 • San Francisco, CA_
 
 Shadowed the User Experience Designer at a startup. Assisted in developing preliminary interface design concepts and color schemes for a suite of iPhone applications.
 
 ### Student Involvement & Leadership • Graphic Designer
 
-_August 2013 – May 2014 • St. Louis, MO_
+_2013 – 2014 • St. Louis, MO_
 
 Designed promotional materials for various Washington University programs. Established a new brand identity, developed brand guidelines, and created templates for diverse marketing materials.
 
 ### LDi • Graphic Design Intern
 
-_June – August 2013 • Tianjin, China_
+_2013 • Tianjin, China_
 
 Collaborated with a marketing team at a leadership development consulting firm. Developed marketing materials for international schools, assisted the marketing director with supplemental projects, and managed the design of an international prayer calendar.
 
@@ -144,5 +160,5 @@ Collaborated with a marketing team at a leadership development consulting firm. 
 - Agile development
 - Kanban (Jira, Trello, Github Projects)
 - Accessibility
-  - Led accessibility initiatives at WWT, creating cheat sheets, training materials, and conducting research on automated accessibility testing.
+  - Co-led accessibility initiatives at WWT, creating cheat sheets, training materials, and conducting research on automated accessibility testing.
 - Hobbies: Sewing, Drawing, Painting, Ceramics, Woodworking, Archery, Historical European Martial Arts, Charcuterie Boards
