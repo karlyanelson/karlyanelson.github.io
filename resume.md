@@ -1,7 +1,7 @@
 ---
 layout: layouts/page.njk
 title: Resume
-description: I'm currently a Senior Software Engineer and UX Designer at Ledger Works.
+description: I'm currently a Senior Software Engineer and UX Designer at Kusari.
 isResume: true
 articleStyles: true
 showTOC: true
