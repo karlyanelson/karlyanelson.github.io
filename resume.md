@@ -22,21 +22,23 @@ Second Major in Anthropology
 
 ## 💼 Job History
 
+### Kusari • Senior Software Engineer
+_2025 - present • Remote_
+
 ### Ledger Works • Senior Software Engineer
+_2022 - 2025 • Remote_
 
-_2022 - present • Remote_
+As a full-stack engineer and designer at a small startup, I contributed to the development of a risk-ops-as-a-service platform focused on multi-chain risk management, financial modeling, and real-time monitoring.
 
-As a full-stack engineer and designer at a small startup, I contribute to the development of a risk-ops-as-a-service platform focused on multi-chain risk management, financial modeling, and real-time monitoring.
-
-- Design multiple web applications, marketing site, and branding materials.
+- Designed multiple web applications, marketing site, and branding materials.
 - Frontend development in React, Remix, and NextJS.
 - API development using Node and AWS Lambda.
-- Manage a PostgreSQL Timescale database.
-- Manage and deploy AWS and Google cloud infrastructure.
-- Monitor applications with Grafana and Cloudwatch alarms.
-- Develop automated deployment pipelines using Github Actions.
-- Collaborate within an agile development team.
-- Deploy to production multiple times a day.
+- Managed a PostgreSQL Timescale database.
+- Managed and deployed AWS and Google cloud infrastructure.
+- Monitored applications with Grafana and Cloudwatch alarms.
+- Developed automated deployment pipelines using Github Actions.
+- Collaborated within an agile development team.
+- Deployed to production multiple times a day.
 
 ### Worldwide Technology • Frontend Engineer
 
