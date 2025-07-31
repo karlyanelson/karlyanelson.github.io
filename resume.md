@@ -99,6 +99,7 @@ Collaborated with a marketing team at a leadership development consulting firm. 
 
 - **Proficient**
   - React
+  - Vue
   - Typescript
   - Javascript
   - HTML
@@ -106,21 +107,21 @@ Collaborated with a marketing team at a leadership development consulting firm. 
   - Sass
   - Tailwind CSS
   - Remix
+  - Nuxt
   - Node
   - Git
   - Terraform
   - SQL (Postgres)
   - Timescale DB
   - React Native
-- **Know enough to be dangerous**
   - Python
+  - Kafka Streams
+- **Know enough to be dangerous**
   - NextJS
-  - Vue
   - Svelte
   - Ember
   - Angular
   - Ruby on Rails
-  - Kafka Streams
 
 ### DevOps
 
@@ -149,6 +150,7 @@ Collaborated with a marketing team at a leadership development consulting firm. 
   - SSM Parameters
   - Cognito
   - IAM Auth
+  - Verified Permissions
   - EC2 Load Balancers
   - RDS
 - **Google Cloud**
