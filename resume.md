@@ -117,6 +117,7 @@ Collaborated with a marketing team at a leadership development consulting firm. 
   - Python
   - Kafka Streams
 - **Know enough to be dangerous**
+  - Go
   - NextJS
   - Svelte
   - Ember
